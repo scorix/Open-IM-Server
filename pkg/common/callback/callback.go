@@ -2,13 +2,14 @@ package callback
 
 import (
 	"Open_IM/pkg/common/constant"
-	server_api_params "Open_IM/pkg/proto/sdk_ws"
+	sdk_ws "Open_IM/pkg/proto/sdk_ws"
+
 	"github.com/golang/protobuf/proto"
 )
 
-func GetContent(msg *server_api_params.MsgData) string {
+func GetContent(msg *sdk_ws.MsgData) string {
 	if msg.ContentType >= constant.NotificationBegin && msg.ContentType <= constant.NotificationEnd {
-		var tips server_api_params.TipsComm
+		var tips sdk_ws.TipsComm
 		_ = proto.Unmarshal(msg.Content, &tips)
 		//marshaler := jsonpb.Marshaler{
 		//	OrigName:     true,

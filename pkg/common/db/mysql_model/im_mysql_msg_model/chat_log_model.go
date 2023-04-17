@@ -13,6 +13,7 @@ import (
 	pbMsg "Open_IM/pkg/proto/msg"
 	"Open_IM/pkg/proto/sdk_ws"
 	"Open_IM/pkg/utils"
+
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/golang/protobuf/proto"
 	"github.com/jinzhu/copier"
@@ -28,7 +29,7 @@ func InsertMessageToChatLog(msg pbMsg.MsgDataToMQ) error {
 		chatLog.RecvID = msg.MsgData.RecvID
 	}
 	if msg.MsgData.ContentType >= constant.NotificationBegin && msg.MsgData.ContentType <= constant.NotificationEnd {
-		var tips server_api_params.TipsComm
+		var tips sdk_ws.TipsComm
 		_ = proto.Unmarshal(msg.MsgData.Content, &tips)
 		marshaler := jsonpb.Marshaler{
 			OrigName:     true,

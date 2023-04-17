@@ -10,7 +10,7 @@ import (
 	"Open_IM/pkg/common/token_verify"
 	"Open_IM/pkg/grpc-etcdv3/getcdv3"
 	pbAdminCMS "Open_IM/pkg/proto/admin_cms"
-	server_api_params "Open_IM/pkg/proto/sdk_ws"
+	sdk_ws "Open_IM/pkg/proto/sdk_ws"
 
 	grpcPrometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 
@@ -32,6 +32,8 @@ type adminCMSServer struct {
 	rpcRegisterName string
 	etcdSchema      string
 	etcdAddr        []string
+
+	pbAdminCMS.UnimplementedAdminCMSServer
 }
 
 func NewAdminCMSServer(port int) *adminCMSServer {
@@ -203,7 +205,7 @@ func (s *adminCMSServer) GetUserRegisterAddFriendIDList(_ context.Context, req *
 		return resp, nil
 	}
 	log.NewDebug(req.OperationID, utils.GetSelfFuncName(), userList, userIDList)
-	resp.Pagination = &server_api_params.ResponsePagination{
+	resp.Pagination = &sdk_ws.ResponsePagination{
 		CurrentPage: req.Pagination.PageNumber,
 		ShowNumber:  req.Pagination.ShowNumber,
 	}
@@ -214,7 +216,7 @@ func (s *adminCMSServer) GetUserRegisterAddFriendIDList(_ context.Context, req *
 
 func (s *adminCMSServer) GetChatLogs(_ context.Context, req *pbAdminCMS.GetChatLogsReq) (*pbAdminCMS.GetChatLogsResp, error) {
 	log.NewInfo(req.OperationID, utils.GetSelfFuncName(), "GetChatLogs", req.String())
-	resp := &pbAdminCMS.GetChatLogsResp{CommonResp: &pbAdminCMS.CommonResp{}, Pagination: &server_api_params.ResponsePagination{}}
+	resp := &pbAdminCMS.GetChatLogsResp{CommonResp: &pbAdminCMS.CommonResp{}, Pagination: &sdk_ws.ResponsePagination{}}
 	chatLog := db.ChatLog{
 		Content:     req.Content,
 		ContentType: req.ContentType,
@@ -292,7 +294,7 @@ func (s *adminCMSServer) GetChatLogs(_ context.Context, req *pbAdminCMS.GetChatL
 		}
 		resp.ChatLogs = append(resp.ChatLogs, pbChatLog)
 	}
-	resp.Pagination = &server_api_params.ResponsePagination{
+	resp.Pagination = &sdk_ws.ResponsePagination{
 		CurrentPage: req.Pagination.PageNumber,
 		ShowNumber:  req.Pagination.ShowNumber,
 	}
@@ -644,7 +646,7 @@ func (s *adminCMSServer) GetUserStatistics(_ context.Context, req *pbAdminCMS.Ge
 
 func (s *adminCMSServer) GetUserFriends(_ context.Context, req *pbAdminCMS.GetUserFriendsReq) (*pbAdminCMS.GetUserFriendsResp, error) {
 	log.NewInfo(req.OperationID, utils.GetSelfFuncName(), "req: ", req.String())
-	resp := &pbAdminCMS.GetUserFriendsResp{CommonResp: &pbAdminCMS.CommonResp{}, Pagination: &server_api_params.ResponsePagination{CurrentPage: req.Pagination.PageNumber, ShowNumber: req.Pagination.ShowNumber}}
+	resp := &pbAdminCMS.GetUserFriendsResp{CommonResp: &pbAdminCMS.CommonResp{}, Pagination: &sdk_ws.ResponsePagination{CurrentPage: req.Pagination.PageNumber, ShowNumber: req.Pagination.ShowNumber}}
 	var friendList []*imdb.FriendUser
 	var err error
 	if req.FriendUserID != "" {
@@ -673,8 +675,8 @@ func (s *adminCMSServer) GetUserFriends(_ context.Context, req *pbAdminCMS.GetUs
 		resp.FriendNums = int32(count)
 	}
 	for _, v := range friendList {
-		friendInfo := &server_api_params.FriendInfo{}
-		userInfo := &server_api_params.UserInfo{UserID: v.FriendUserID, Nickname: v.Nickname}
+		friendInfo := &sdk_ws.FriendInfo{}
+		userInfo := &sdk_ws.UserInfo{UserID: v.FriendUserID, Nickname: v.Nickname}
 		utils.CopyStructFields(friendInfo, v)
 		friendInfo.FriendUser = userInfo
 		resp.FriendInfoList = append(resp.FriendInfoList, friendInfo)

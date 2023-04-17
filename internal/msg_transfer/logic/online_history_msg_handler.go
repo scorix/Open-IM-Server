@@ -11,12 +11,13 @@ import (
 	pbPush "Open_IM/pkg/proto/push"
 	"Open_IM/pkg/utils"
 	"context"
-	"github.com/Shopify/sarama"
-	"github.com/golang/protobuf/proto"
 	"hash/crc32"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/Shopify/sarama"
+	"github.com/golang/protobuf/proto"
 )
 
 type MsgChannelValue struct {
@@ -168,8 +169,8 @@ func (och *OnlineHistoryRedisConsumerHandler) SendMessageToMongoCH(aggregationID
 //				}
 //				for _, v := range msgList {
 //					if v.MsgData.ContentType == constant.DeleteMessageNotification {
-//						tips := server_api_params.TipsComm{}
-//						DeleteMessageTips := server_api_params.DeleteMessageTips{}
+//						tips := sdk_ws.TipsComm{}
+//						DeleteMessageTips := sdk_ws.DeleteMessageTips{}
 //						err := proto.Unmarshal(v.MsgData.Content, &tips)
 //						if err != nil {
 //							log.NewError(triggerID, "tips unmarshal err:", err.Error(), v.String())

@@ -8,9 +8,10 @@ import (
 	kfk "Open_IM/pkg/common/kafka"
 	"Open_IM/pkg/common/log"
 	pbMsg "Open_IM/pkg/proto/msg"
-	server_api_params "Open_IM/pkg/proto/sdk_ws"
+	sdk_ws "Open_IM/pkg/proto/sdk_ws"
 	"Open_IM/pkg/utils"
 	"encoding/json"
+
 	"github.com/Shopify/sarama"
 
 	"github.com/golang/protobuf/proto"
@@ -127,9 +128,9 @@ func (mmc *ModifyMsgConsumerHandler) ModifyMsg(cMsg *sarama.ConsumerMessage, msg
 				}
 
 			} else {
-				var reactionExtensionList = make(map[string]*server_api_params.KeyValue)
+				var reactionExtensionList = make(map[string]*sdk_ws.KeyValue)
 				for _, v := range notification.SuccessReactionExtensionList {
-					reactionExtensionList[v.TypeKey] = &server_api_params.KeyValue{
+					reactionExtensionList[v.TypeKey] = &sdk_ws.KeyValue{
 						TypeKey:          v.TypeKey,
 						Value:            v.Value,
 						LatestUpdateTime: v.LatestUpdateTime,

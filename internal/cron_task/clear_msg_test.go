@@ -3,7 +3,7 @@ package cronTask
 import (
 	"Open_IM/pkg/common/constant"
 	"Open_IM/pkg/common/db"
-	server_api_params "Open_IM/pkg/proto/sdk_ws"
+	sdk_ws "Open_IM/pkg/proto/sdk_ws"
 	"Open_IM/pkg/utils"
 	"context"
 	"fmt"
@@ -27,7 +27,7 @@ var (
 func GenUserChat(startSeq, stopSeq, delSeq, index uint32, userID string) *db.UserChat {
 	chat := &db.UserChat{UID: userID + ":" + strconv.Itoa(int(index))}
 	for i := startSeq; i <= stopSeq; i++ {
-		msg := server_api_params.MsgData{
+		msg := sdk_ws.MsgData{
 			SendID:           "sendID1",
 			RecvID:           "recvID1",
 			GroupID:          "",

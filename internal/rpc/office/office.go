@@ -34,6 +34,8 @@ type officeServer struct {
 	etcdSchema      string
 	etcdAddr        []string
 	ch              chan tagSendStruct
+
+	pbOffice.UnimplementedOfficeServiceServer
 }
 
 func NewOfficeServer(port int) *officeServer {

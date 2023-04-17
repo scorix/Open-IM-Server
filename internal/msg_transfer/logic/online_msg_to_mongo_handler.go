@@ -7,8 +7,9 @@ import (
 	kfk "Open_IM/pkg/common/kafka"
 	"Open_IM/pkg/common/log"
 	pbMsg "Open_IM/pkg/proto/msg"
-	server_api_params "Open_IM/pkg/proto/sdk_ws"
+	sdk_ws "Open_IM/pkg/proto/sdk_ws"
 	"Open_IM/pkg/utils"
+
 	"github.com/Shopify/sarama"
 	"github.com/golang/protobuf/proto"
 )
@@ -46,8 +47,8 @@ func (mc *OnlineHistoryMongoConsumerHandler) handleChatWs2Mongo(cMsg *sarama.Con
 	}
 	for _, v := range msgFromMQ.MessageList {
 		if v.MsgData.ContentType == constant.DeleteMessageNotification {
-			tips := server_api_params.TipsComm{}
-			DeleteMessageTips := server_api_params.DeleteMessageTips{}
+			tips := sdk_ws.TipsComm{}
+			DeleteMessageTips := sdk_ws.DeleteMessageTips{}
 			err := proto.Unmarshal(v.MsgData.Content, &tips)
 			if err != nil {
 				log.NewError(msgFromMQ.TriggerID, "tips unmarshal err:", err.Error(), v.String())

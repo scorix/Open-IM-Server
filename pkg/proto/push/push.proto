@@ -1,23 +1,25 @@
 syntax = "proto3";
-import "Open-IM-Server/pkg/proto/sdk_ws/ws.proto";
-option go_package = "Open_IM/pkg/proto/push;pbPush";
 package push;
+
+import "sdk_ws/ws.proto";
+
+option go_package = "Open_IM/pkg/proto/push;pbPush";
 
 message PushMsgReq {
   string operationID = 1;
-  server_api_params.MsgData msgData = 2;
+  sdk_ws.MsgData msgData = 2;
   string pushToUserID = 3;
 }
-message PushMsgResp{
-  int32   ResultCode = 1;
+message PushMsgResp {
+  int32 ResultCode = 1;
 }
-message DelUserPushTokenReq{
-  string  operationID = 1;
-  string userID =2;
+message DelUserPushTokenReq {
+  string operationID = 1;
+  string userID = 2;
   int32 platformID = 3;
 }
-message DelUserPushTokenResp{
-  int32  errCode = 1;
+message DelUserPushTokenResp {
+  int32 errCode = 1;
   string errMsg = 2;
 }
 
@@ -42,8 +44,7 @@ message DelUserPushTokenResp{
 //}
 
 service PushMsgService {
-  rpc PushMsg(PushMsgReq) returns(PushMsgResp);
-  rpc DelUserPushToken(DelUserPushTokenReq) returns(DelUserPushTokenResp);
-//  rpc InternalPushMsg(InternalPushMsgReq)returns(PushMsgResp);
+  rpc PushMsg(PushMsgReq) returns (PushMsgResp);
+  rpc DelUserPushToken(DelUserPushTokenReq) returns (DelUserPushTokenResp);
+  //  rpc InternalPushMsg(InternalPushMsgReq)returns(PushMsgResp);
 }
-

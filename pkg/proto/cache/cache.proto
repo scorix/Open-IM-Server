@@ -1,9 +1,10 @@
 syntax = "proto3";
-option go_package = "Open_IM/pkg/proto/cache;cache";
 package cache;
 
-message CommonResp{
-  int32  errCode = 1;
+option go_package = "Open_IM/pkg/proto/cache;cache";
+
+message CommonResp {
+  int32 errCode = 1;
   string errMsg = 2;
 }
 
@@ -23,7 +24,7 @@ message DelFriendIDListFromCacheReq {
 }
 
 message DelFriendIDListFromCacheResp {
-   CommonResp commonResp = 1;
+  CommonResp commonResp = 1;
 }
 
 message GetBlackIDListFromCacheReq {
@@ -64,25 +65,22 @@ message DelGroupMemberIDListFromCacheResp {
   CommonResp commonResp = 1;
 }
 
-service cache{
-
+service cache {
   // friendInfo
-  rpc GetFriendIDListFromCache(GetFriendIDListFromCacheReq) returns(GetFriendIDListFromCacheResp);
+  rpc GetFriendIDListFromCache(GetFriendIDListFromCacheReq) returns (GetFriendIDListFromCacheResp);
 
   // for dtm
-  rpc DelFriendIDListFromCache(DelFriendIDListFromCacheReq) returns(DelFriendIDListFromCacheResp);
+  rpc DelFriendIDListFromCache(DelFriendIDListFromCacheReq) returns (DelFriendIDListFromCacheResp);
 
   // blackList
-  rpc GetBlackIDListFromCache(GetBlackIDListFromCacheReq) returns(GetBlackIDListFromCacheResp);
+  rpc GetBlackIDListFromCache(GetBlackIDListFromCacheReq) returns (GetBlackIDListFromCacheResp);
 
   // for dtm
   rpc DelBlackIDListFromCache(DelBlackIDListFromCacheReq) returns (DelBlackIDListFromCacheResp);
 
   // group
-  rpc GetGroupMemberIDListFromCache(GetGroupMemberIDListFromCacheReq) returns(GetGroupMemberIDListFromCacheResp);
+  rpc GetGroupMemberIDListFromCache(GetGroupMemberIDListFromCacheReq) returns (GetGroupMemberIDListFromCacheResp);
 
   // for dtm
-  rpc DelGroupMemberIDListFromCache(DelGroupMemberIDListFromCacheReq) returns(DelGroupMemberIDListFromCacheResp);
+  rpc DelGroupMemberIDListFromCache(DelGroupMemberIDListFromCacheReq) returns (DelGroupMemberIDListFromCacheResp);
 }
-
-

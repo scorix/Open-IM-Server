@@ -496,7 +496,7 @@ const docTemplate = `{
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.PublicUserInfo"
+                                                "$ref": "#/definitions/sdk_ws.PublicUserInfo"
                                             }
                                         }
                                     }
@@ -565,7 +565,7 @@ const docTemplate = `{
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.FriendRequest"
+                                                "$ref": "#/definitions/sdk_ws.FriendRequest"
                                             }
                                         }
                                     }
@@ -634,7 +634,7 @@ const docTemplate = `{
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.FriendInfo"
+                                                "$ref": "#/definitions/sdk_ws.FriendInfo"
                                             }
                                         }
                                     }
@@ -703,7 +703,7 @@ const docTemplate = `{
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.FriendRequest"
+                                                "$ref": "#/definitions/sdk_ws.FriendRequest"
                                             }
                                         }
                                     }
@@ -1094,7 +1094,7 @@ const docTemplate = `{
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "$ref": "#/definitions/server_api_params.GroupInfo"
+                                            "$ref": "#/definitions/sdk_ws.GroupInfo"
                                         }
                                     }
                                 }
@@ -1216,7 +1216,7 @@ const docTemplate = `{
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.GroupMemberFullInfo"
+                                                "$ref": "#/definitions/sdk_ws.GroupMemberFullInfo"
                                             }
                                         }
                                     }
@@ -1285,7 +1285,7 @@ const docTemplate = `{
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.GroupMemberFullInfo"
+                                                "$ref": "#/definitions/sdk_ws.GroupMemberFullInfo"
                                             }
                                         }
                                     }
@@ -1408,7 +1408,7 @@ const docTemplate = `{
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.GroupInfo"
+                                                "$ref": "#/definitions/sdk_ws.GroupInfo"
                                             }
                                         }
                                     }
@@ -1477,7 +1477,7 @@ const docTemplate = `{
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.GroupRequest"
+                                                "$ref": "#/definitions/sdk_ws.GroupRequest"
                                             }
                                         }
                                     }
@@ -1546,7 +1546,7 @@ const docTemplate = `{
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.GroupRequest"
+                                                "$ref": "#/definitions/sdk_ws.GroupRequest"
                                             }
                                         }
                                     }
@@ -3428,7 +3428,7 @@ const docTemplate = `{
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "$ref": "#/definitions/server_api_params.Department"
+                                            "$ref": "#/definitions/sdk_ws.Department"
                                         }
                                     }
                                 }
@@ -3766,7 +3766,7 @@ const docTemplate = `{
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.UserDepartmentMember"
+                                                "$ref": "#/definitions/sdk_ws.UserDepartmentMember"
                                             }
                                         }
                                     }
@@ -3835,7 +3835,7 @@ const docTemplate = `{
                                         "data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.Department"
+                                                "$ref": "#/definitions/sdk_ws.Department"
                                             }
                                         }
                                     }
@@ -3902,7 +3902,7 @@ const docTemplate = `{
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "$ref": "#/definitions/server_api_params.UserInDepartment"
+                                            "$ref": "#/definitions/sdk_ws.UserInDepartment"
                                         }
                                     }
                                 }
@@ -4304,7 +4304,7 @@ const docTemplate = `{
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "$ref": "#/definitions/server_api_params.UserInfo"
+                                            "$ref": "#/definitions/sdk_ws.UserInfo"
                                         }
                                     }
                                 }
@@ -4372,7 +4372,7 @@ const docTemplate = `{
                                         "Data": {
                                             "type": "array",
                                             "items": {
-                                                "$ref": "#/definitions/server_api_params.PublicUserInfo"
+                                                "$ref": "#/definitions/sdk_ws.PublicUserInfo"
                                             }
                                         }
                                     }
@@ -6770,7 +6770,7 @@ const docTemplate = `{
                     "type": "boolean"
                 },
                 "offlinePushInfo": {
-                    "$ref": "#/definitions/server_api_params.OfflinePushInfo"
+                    "$ref": "#/definitions/sdk_ws.OfflinePushInfo"
                 },
                 "operationID": {
                     "type": "string"
@@ -6823,7 +6823,7 @@ const docTemplate = `{
                     "type": "boolean"
                 },
                 "offlinePushInfo": {
-                    "$ref": "#/definitions/server_api_params.OfflinePushInfo"
+                    "$ref": "#/definitions/sdk_ws.OfflinePushInfo"
                 },
                 "operationID": {
                     "type": "string"
@@ -6852,7 +6852,7 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "data": {
-                    "$ref": "#/definitions/server_api_params.UserSendMsgResp"
+                    "$ref": "#/definitions/sdk_ws.UserSendMsgResp"
                 },
                 "errCode": {
                     "type": "integer"
@@ -8110,7 +8110,7 @@ const docTemplate = `{
                 }
             }
         },
-        "server_api_params.Department": {
+        "sdk_ws.Department": {
             "type": "object",
             "properties": {
                 "createTime": {
@@ -8145,7 +8145,7 @@ const docTemplate = `{
                 }
             }
         },
-        "server_api_params.DepartmentMember": {
+        "sdk_ws.DepartmentMember": {
             "type": "object",
             "properties": {
                 "departmentID": {
@@ -8171,7 +8171,7 @@ const docTemplate = `{
                 }
             }
         },
-        "server_api_params.FriendInfo": {
+        "sdk_ws.FriendInfo": {
             "type": "object",
             "properties": {
                 "addSource": {
@@ -8184,7 +8184,7 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "friendUser": {
-                    "$ref": "#/definitions/server_api_params.UserInfo"
+                    "$ref": "#/definitions/sdk_ws.UserInfo"
                 },
                 "operatorUserID": {
                     "type": "string"
@@ -8197,7 +8197,7 @@ const docTemplate = `{
                 }
             }
         },
-        "server_api_params.FriendRequest": {
+        "sdk_ws.FriendRequest": {
             "type": "object",
             "properties": {
                 "createTime": {
@@ -8247,7 +8247,7 @@ const docTemplate = `{
                 }
             }
         },
-        "server_api_params.GroupInfo": {
+        "sdk_ws.GroupInfo": {
             "type": "object",
             "properties": {
                 "applyMemberFriend": {
@@ -8303,7 +8303,7 @@ const docTemplate = `{
                 }
             }
         },
-        "server_api_params.GroupMemberFullInfo": {
+        "sdk_ws.GroupMemberFullInfo": {
             "type": "object",
             "properties": {
                 "appMangerLevel": {
@@ -8344,14 +8344,14 @@ const docTemplate = `{
                 }
             }
         },
-        "server_api_params.GroupRequest": {
+        "sdk_ws.GroupRequest": {
             "type": "object",
             "properties": {
                 "ex": {
                     "type": "string"
                 },
                 "groupInfo": {
-                    "$ref": "#/definitions/server_api_params.GroupInfo"
+                    "$ref": "#/definitions/sdk_ws.GroupInfo"
                 },
                 "handleMsg": {
                     "type": "string"
@@ -8378,11 +8378,11 @@ const docTemplate = `{
                     "type": "integer"
                 },
                 "userInfo": {
-                    "$ref": "#/definitions/server_api_params.PublicUserInfo"
+                    "$ref": "#/definitions/sdk_ws.PublicUserInfo"
                 }
             }
         },
-        "server_api_params.OfflinePushInfo": {
+        "sdk_ws.OfflinePushInfo": {
             "type": "object",
             "properties": {
                 "desc": {
@@ -8402,7 +8402,7 @@ const docTemplate = `{
                 }
             }
         },
-        "server_api_params.OrganizationUser": {
+        "sdk_ws.OrganizationUser": {
             "type": "object",
             "properties": {
                 "birth": {
@@ -8440,7 +8440,7 @@ const docTemplate = `{
                 }
             }
         },
-        "server_api_params.PublicUserInfo": {
+        "sdk_ws.PublicUserInfo": {
             "type": "object",
             "properties": {
                 "ex": {
@@ -8460,32 +8460,32 @@ const docTemplate = `{
                 }
             }
         },
-        "server_api_params.UserDepartmentMember": {
+        "sdk_ws.UserDepartmentMember": {
             "type": "object",
             "properties": {
                 "departmentMember": {
-                    "$ref": "#/definitions/server_api_params.DepartmentMember"
+                    "$ref": "#/definitions/sdk_ws.DepartmentMember"
                 },
                 "organizationUser": {
-                    "$ref": "#/definitions/server_api_params.OrganizationUser"
+                    "$ref": "#/definitions/sdk_ws.OrganizationUser"
                 }
             }
         },
-        "server_api_params.UserInDepartment": {
+        "sdk_ws.UserInDepartment": {
             "type": "object",
             "properties": {
                 "departmentMemberList": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/server_api_params.DepartmentMember"
+                        "$ref": "#/definitions/sdk_ws.DepartmentMember"
                     }
                 },
                 "organizationUser": {
-                    "$ref": "#/definitions/server_api_params.OrganizationUser"
+                    "$ref": "#/definitions/sdk_ws.OrganizationUser"
                 }
             }
         },
-        "server_api_params.UserInfo": {
+        "sdk_ws.UserInfo": {
             "type": "object",
             "properties": {
                 "appMangerLevel": {
@@ -8523,7 +8523,7 @@ const docTemplate = `{
                 }
             }
         },
-        "server_api_params.UserSendMsgResp": {
+        "sdk_ws.UserSendMsgResp": {
             "type": "object",
             "properties": {
                 "clientMsgID": {

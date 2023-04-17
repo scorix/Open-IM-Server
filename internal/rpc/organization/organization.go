@@ -32,6 +32,8 @@ type organizationServer struct {
 	rpcRegisterName string
 	etcdSchema      string
 	etcdAddr        []string
+
+	rpc.UnimplementedOrganizationServer
 }
 
 func NewServer(port int) *organizationServer {

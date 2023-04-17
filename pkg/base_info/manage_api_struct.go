@@ -2,7 +2,7 @@ package base_info
 
 import (
 	pbRelay "Open_IM/pkg/proto/relay"
-	server_api_params "Open_IM/pkg/proto/sdk_ws"
+	sdk_ws "Open_IM/pkg/proto/sdk_ws"
 	pbUser "Open_IM/pkg/proto/user"
 )
 
@@ -47,12 +47,12 @@ type ManagementSendMsg struct {
 	SenderFaceURL       string `json:"senderFaceURL" `
 	SenderPlatformID    int32  `json:"senderPlatformID"`
 	//ForceList        []string                     `json:"forceList" `
-	Content         map[string]interface{}             `json:"content" binding:"required" swaggerignore:"true"`
-	ContentType     int32                              `json:"contentType" binding:"required"`
-	SessionType     int32                              `json:"sessionType" binding:"required"`
-	IsOnlineOnly    bool                               `json:"isOnlineOnly"`
-	NotOfflinePush  bool                               `json:"notOfflinePush"`
-	OfflinePushInfo *server_api_params.OfflinePushInfo `json:"offlinePushInfo"`
+	Content         map[string]interface{}  `json:"content" binding:"required" swaggerignore:"true"`
+	ContentType     int32                   `json:"contentType" binding:"required"`
+	SessionType     int32                   `json:"sessionType" binding:"required"`
+	IsOnlineOnly    bool                    `json:"isOnlineOnly"`
+	NotOfflinePush  bool                    `json:"notOfflinePush"`
+	OfflinePushInfo *sdk_ws.OfflinePushInfo `json:"offlinePushInfo"`
 }
 
 type ManagementSendMsgReq struct {
@@ -62,7 +62,7 @@ type ManagementSendMsgReq struct {
 
 type ManagementSendMsgResp struct {
 	CommResp
-	ResultList server_api_params.UserSendMsgResp `json:"data"`
+	ResultList sdk_ws.UserSendMsgResp `json:"data"`
 }
 
 type ManagementBatchSendMsgReq struct {

@@ -1,13 +1,13 @@
 syntax = "proto3";
-import "Open-IM-Server/pkg/proto/sdk_ws/wrappers.proto";
-option go_package = "Open_IM/pkg/proto/sdk_ws;server_api_params";
-package server_api_params;
+package sdk_ws;
 
+import "google/protobuf/wrappers.proto";
+
+option go_package = "Open_IM/pkg/proto/sdk_ws";
 
 ////////////////////////////////base///////////////////////////////
 
-
-message GroupInfo{
+message GroupInfo {
   string groupID = 1;
   string groupName = 2;
   string notification = 3;
@@ -27,7 +27,7 @@ message GroupInfo{
   string notificationUserID = 17;
 }
 
-message GroupInfoForSet{
+message GroupInfoForSet {
   string groupID = 1;
   string groupName = 2;
   string notification = 3;
@@ -39,10 +39,9 @@ message GroupInfoForSet{
   google.protobuf.Int32Value applyMemberFriend = 9;
 }
 
-
 message GroupMemberFullInfo {
-  string groupID = 1 ;
-  string userID = 2 ;
+  string groupID = 1;
+  string userID = 2;
   int32 roleLevel = 3;
   int32 joinTime = 4;
   string nickname = 5;
@@ -55,7 +54,7 @@ message GroupMemberFullInfo {
   string inviterUserID = 12;
 }
 
-message PublicUserInfo{
+message PublicUserInfo {
   string userID = 1;
   string nickname = 2;
   string faceURL = 3;
@@ -63,7 +62,7 @@ message PublicUserInfo{
   string ex = 5;
 }
 
-message UserInfo{
+message UserInfo {
   string userID = 1;
   string nickname = 2;
   string faceURL = 3;
@@ -78,7 +77,7 @@ message UserInfo{
   string birthStr = 12;
 }
 
-message FriendInfo{
+message FriendInfo {
   string ownerUserID = 1;
   string remark = 2;
   uint32 createTime = 3;
@@ -88,7 +87,7 @@ message FriendInfo{
   string ex = 7;
 }
 
-message BlackInfo{
+message BlackInfo {
   string ownerUserID = 1;
   uint32 createTime = 2;
   PublicUserInfo blackUserInfo = 3;
@@ -97,12 +96,12 @@ message BlackInfo{
   string ex = 6;
 }
 
-message GroupRequest{
+message GroupRequest {
   PublicUserInfo userInfo = 1;
   GroupInfo groupInfo = 2;
   int32 handleResult = 3;
   string reqMsg = 4;
-  string  handleMsg = 5;
+  string handleMsg = 5;
   uint32 reqTime = 6;
   string handleUserID = 7;
   uint32 handleTime = 8;
@@ -111,7 +110,7 @@ message GroupRequest{
   string inviterUserID = 11;
 }
 
-message FriendRequest{
+message FriendRequest {
   string fromUserID = 1;
   string fromNickname = 2;
   string fromFaceURL = 3;
@@ -144,19 +143,17 @@ message Department {
   string ex = 10;
 }
 
-
-
-message OrganizationUser  {
+message OrganizationUser {
   string userID = 1;
-  string  nickname = 2;
-  string   englishName = 3;
-  string  faceURL = 4;
-  int32   gender = 5;
-  string   mobile = 6;
+  string nickname = 2;
+  string englishName = 3;
+  string faceURL = 4;
+  int32 gender = 5;
+  string mobile = 6;
   string telephone = 7;
   uint32 birth = 8;
-  string  email = 9;
-  uint32   createTime = 10;
+  string email = 9;
+  uint32 createTime = 10;
   string ex = 11;
   string birthStr = 12;
 }
@@ -171,41 +168,29 @@ message DepartmentMember {
   string ex = 7;
 }
 
-
-message  UserDepartmentMember {
+message UserDepartmentMember {
   OrganizationUser organizationUser = 1;
   DepartmentMember departmentMember = 2;
 }
 
-
-message  UserInDepartment {
+message UserInDepartment {
   OrganizationUser organizationUser = 1;
   repeated DepartmentMember departmentMemberList = 2;
 }
 
-
-
-
-
 ///////////////////////////////////organization end//////////////////////////////////
 
-
-
-
-
-
 ///////////////////////////////////base end/////////////////////////////////////
-message PullMessageBySeqListReq{
+message PullMessageBySeqListReq {
   string userID = 1;
   string operationID = 2;
   repeated uint32 seqList = 3;
-  map <string, seqList>groupSeqList = 4;
+  map<string, seqList> groupSeqList = 4;
 }
 
 message seqList {
   repeated uint32 seqList = 1;
 }
-
 
 message MsgDataList {
   repeated MsgData msgDataList = 1;
@@ -218,14 +203,12 @@ message PullMessageBySeqListResp {
   map<string, MsgDataList> groupMsgDataList = 4;
 }
 
-
-
 message GetMaxAndMinSeqReq {
   repeated string groupIDList = 1;
   string userID = 2;
-  string  operationID = 3;
+  string operationID = 3;
 }
-message MaxAndMinSeq{
+message MaxAndMinSeq {
   uint32 maxSeq = 1;
   uint32 minSeq = 2;
 }
@@ -240,20 +223,20 @@ message GetMaxAndMinSeqResp {
 message UserSendMsgResp {
   string serverMsgID = 1;
   string clientMsgID = 2;
-  int64  sendTime = 3;
-  string  ex   = 4;
+  int64 sendTime = 3;
+  string ex = 4;
 }
 
 message MsgData {
-  string  sendID = 1;
-  string  recvID = 2;
+  string sendID = 1;
+  string recvID = 2;
   string groupID = 3;
   string clientMsgID = 4;
   string serverMsgID = 5;
   int32 senderPlatformID = 6;
-  string  senderNickname = 7;
-  string  senderFaceURL = 8;
-  int32   sessionType = 9;
+  string senderNickname = 7;
+  string senderFaceURL = 8;
+  int32 sessionType = 9;
   int32 msgFrom = 10;
   int32 contentType = 11;
   bytes content = 12;
@@ -266,14 +249,13 @@ message MsgData {
   repeated string atUserIDList = 20;
   bytes msgDataList = 21;
   string attachedInfo = 22;
-  string  ex = 23;
+  string ex = 23;
 
-  bool   isReact = 40;
+  bool isReact = 40;
   bool isExternalExtensions = 41;
   int64 msgFirstModifyTime = 42;
-
 }
-message OfflinePushInfo{
+message OfflinePushInfo {
   string title = 1;
   string desc = 2;
   string ex = 3;
@@ -281,15 +263,7 @@ message OfflinePushInfo{
   bool iOSBadgeCount = 5;
 }
 
-
-
-
-
-
-
-
-
-message TipsComm{
+message TipsComm {
   bytes detail = 1;
   string defaultTips = 2;
   string jsonDetail = 3;
@@ -297,9 +271,8 @@ message TipsComm{
 
 //////////////////////group/////////////////////
 
-
 //	OnGroupCreated()
-message GroupCreatedTips{
+message GroupCreatedTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
   repeated GroupMemberFullInfo memberList = 3;
@@ -308,55 +281,53 @@ message GroupCreatedTips{
 }
 
 //	OnGroupInfoSet()
-message GroupInfoSetTips{
+message GroupInfoSetTips {
   GroupMemberFullInfo opUser = 1; //who do this
   int64 muteTime = 2;
   GroupInfo group = 3;
 }
 
 //	OnJoinGroupApplication()
-message JoinGroupApplicationTips{
+message JoinGroupApplicationTips {
   GroupInfo group = 1;
   PublicUserInfo applicant = 2;
-  string  reqMsg = 3;
+  string reqMsg = 3;
 }
 
 //	OnQuitGroup()
 //Actively leave the group
-message MemberQuitTips{
+message MemberQuitTips {
   GroupInfo group = 1;
   GroupMemberFullInfo quitUser = 2;
   int64 operationTime = 3;
 }
 
-
 //	OnApplicationGroupAccepted()
-message GroupApplicationAcceptedTips{
+message GroupApplicationAcceptedTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
-  string  handleMsg = 4;
+  string handleMsg = 4;
   int32 receiverAs = 5; // admin(==1) or applicant(==0)
 }
 
 //	OnApplicationGroupRejected()
-message GroupApplicationRejectedTips{
+message GroupApplicationRejectedTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
-  string  handleMsg = 4;
+  string handleMsg = 4;
   int32 receiverAs = 5; // admin(==1) or applicant(==0)
 }
 
 //	OnTransferGroupOwner()
-message GroupOwnerTransferredTips{
+message GroupOwnerTransferredTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
   GroupMemberFullInfo newGroupOwner = 3;
   int64 operationTime = 4;
 }
 
-
 //	OnMemberKicked()
-message MemberKickedTips{
+message MemberKickedTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
   repeated GroupMemberFullInfo kickedUserList = 3;
@@ -364,7 +335,7 @@ message MemberKickedTips{
 }
 
 //	OnMemberInvited()
-message MemberInvitedTips{
+message MemberInvitedTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
   repeated GroupMemberFullInfo invitedUserList = 3;
@@ -372,19 +343,19 @@ message MemberInvitedTips{
 }
 
 //Actively join the group
-message MemberEnterTips{
+message MemberEnterTips {
   GroupInfo group = 1;
   GroupMemberFullInfo entrantUser = 2;
   int64 operationTime = 3;
 }
 
-message GroupDismissedTips{
+message GroupDismissedTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
   int64 operationTime = 3;
 }
 
-message GroupMemberMutedTips{
+message GroupMemberMutedTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
   int64 operationTime = 3;
@@ -392,38 +363,36 @@ message GroupMemberMutedTips{
   uint32 mutedSeconds = 5;
 }
 
-message GroupMemberCancelMutedTips{
+message GroupMemberCancelMutedTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
   int64 operationTime = 3;
   GroupMemberFullInfo mutedUser = 4;
 }
 
-message GroupMutedTips{
+message GroupMutedTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
   int64 operationTime = 3;
 }
 
-message GroupCancelMutedTips{
+message GroupCancelMutedTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
   int64 operationTime = 3;
 }
 
-message GroupMemberInfoSetTips{
+message GroupMemberInfoSetTips {
   GroupInfo group = 1;
   GroupMemberFullInfo opUser = 2;
   int64 operationTime = 3;
   GroupMemberFullInfo changedUser = 4;
 }
 
-
-message OrganizationChangedTips{
+message OrganizationChangedTips {
   UserInfo opUser = 2;
   int64 operationTime = 3;
 }
-
 
 //////////////////////friend/////////////////////
 //message FriendInfo{
@@ -433,87 +402,83 @@ message OrganizationChangedTips{
 //  UserInfo FriendUser = 4;
 //}
 
-message FriendApplication{
+message FriendApplication {
   int64 addTime = 1;
   string addSource = 2;
   string addWording = 3;
 }
 
-message FromToUserID{
+message FromToUserID {
   string fromUserID = 1;
   string toUserID = 2;
 }
 
 //FromUserID apply to add ToUserID
-message FriendApplicationTips{
+message FriendApplicationTips {
   FromToUserID fromToUserID = 1;
 }
 
 //FromUserID accept or reject ToUserID
-message FriendApplicationApprovedTips{
+message FriendApplicationApprovedTips {
   FromToUserID fromToUserID = 1;
   string handleMsg = 2;
 }
 
 //FromUserID accept or reject ToUserID
-message FriendApplicationRejectedTips{
+message FriendApplicationRejectedTips {
   FromToUserID fromToUserID = 1;
   string handleMsg = 2;
 }
-
 
 // FromUserID  Added a friend ToUserID
-message FriendAddedTips{
+message FriendAddedTips {
   FriendInfo friend = 1;
   int64 operationTime = 2;
-  PublicUserInfo     opUser = 3;  //who do this
-
+  PublicUserInfo opUser = 3; //who do this
 }
 
 // FromUserID  deleted a friend ToUserID
-message FriendDeletedTips{
+message FriendDeletedTips {
   FromToUserID fromToUserID = 1;
 }
 
-
-
-message BlackAddedTips{
+message BlackAddedTips {
   FromToUserID fromToUserID = 1;
 }
 
-message BlackDeletedTips{
+message BlackDeletedTips {
   FromToUserID fromToUserID = 1;
 }
 
-message FriendInfoChangedTips{
+message FriendInfoChangedTips {
   FromToUserID fromToUserID = 1;
 }
+
 //////////////////////user/////////////////////
-message UserInfoUpdatedTips{
+message UserInfoUpdatedTips {
   string userID = 1;
 }
 
 //////////////////////conversation/////////////////////
-message ConversationUpdateTips{
+message ConversationUpdateTips {
   string UserID = 1;
   repeated string conversationIDList = 2;
   int64 updateUnreadCountTime = 3;
-
-
 }
 
-message ConversationSetPrivateTips{
+message ConversationSetPrivateTips {
   string recvID = 1;
   string sendID = 2;
   bool isPrivate = 3;
 }
 
 ////////////////////message///////////////////////
-message DeleteMessageTips{
+message DeleteMessageTips {
   string opUserID = 1;
   string userID = 2;
   repeated uint32 seqList = 3;
 }
+
 ///cms
 message RequestPagination {
   int32 pageNumber = 1;
@@ -525,13 +490,12 @@ message ResponsePagination {
   int32 ShowNumber = 6;
 }
 
-
 ///////////////////signal//////////////
 message SignalReq {
   oneof payload {
     SignalInviteReq invite = 1;
     SignalInviteInGroupReq inviteInGroup = 2;
-    SignalCancelReq  cancel = 3;
+    SignalCancelReq cancel = 3;
     SignalAcceptReq accept = 4;
     SignalHungUpReq hungUp = 5;
     SignalRejectReq reject = 6;
@@ -556,12 +520,11 @@ message SignalResp {
   }
 }
 
-
-message InvitationInfo  {
+message InvitationInfo {
   string inviterUserID = 1;
   repeated string inviteeUserIDList = 2;
   string customData = 3;
-  string  groupID = 4;
+  string groupID = 4;
   string roomID = 5;
   int32 timeout = 6;
   string mediaType = 7;
@@ -571,7 +534,7 @@ message InvitationInfo  {
   repeated string busyLineUserIDList = 11;
 }
 
-message ParticipantMetaData{
+message ParticipantMetaData {
   GroupInfo groupInfo = 1;
   GroupMemberFullInfo groupMemberInfo = 2;
   PublicUserInfo userInfo = 3;
@@ -582,7 +545,6 @@ message SignalInviteReq {
   InvitationInfo invitation = 2;
   OfflinePushInfo offlinePushInfo = 3;
   ParticipantMetaData participant = 4;
-
 }
 
 message SignalInviteReply {
@@ -613,9 +575,7 @@ message SignalCancelReq {
   ParticipantMetaData participant = 4;
 }
 
-message SignalCancelReply {
-
-}
+message SignalCancelReply {}
 
 message SignalAcceptReq {
   string opUserID = 1;
@@ -637,10 +597,7 @@ message SignalHungUpReq {
   OfflinePushInfo offlinePushInfo = 3;
 }
 
-message SignalHungUpReply {
-
-}
-
+message SignalHungUpReply {}
 
 message SignalRejectReq {
   string opUserID = 1;
@@ -650,9 +607,7 @@ message SignalRejectReq {
   int32 opUserPlatformID = 5;
 }
 
-message SignalRejectReply {
-
-}
+message SignalRejectReply {}
 
 message SignalGetRoomByGroupIDReq {
   string opUserID = 1;
@@ -690,15 +645,14 @@ message SignalGetTokenByRoomIDReply {
   string liveURL = 2;
 }
 
-
-message DelMsgListReq{
+message DelMsgListReq {
   string opUserID = 1;
   string userID = 2;
   repeated uint32 seqList = 3;
   string operationID = 4;
 }
 
-message DelMsgListResp{
+message DelMsgListResp {
   int32 errCode = 1;
   string errMsg = 2;
 }
@@ -716,14 +670,14 @@ message SetAppBackgroundStatusResp {
 message ExtendMsgSet {
   string sourceID = 1;
   int32 sessionType = 2;
-  map <string, ExtendMsg>extendMsgs = 3;
+  map<string, ExtendMsg> extendMsgs = 3;
   int64 MaxMsgUpdateTime = 4;
   int32 extendMsgNum = 5;
   int64 createTime = 6;
 }
 
 message ExtendMsg {
-  map <string, KeyValue>reactionExtensionList = 1;
+  map<string, KeyValue> reactionExtensionList = 1;
   string clientMsgID = 2;
   int64 msgFirstModifyTime = 3;
   string attachedInfo = 4;
@@ -735,6 +689,3 @@ message KeyValue {
   string value = 2;
   int64 latestUpdateTime = 3;
 }
-
-
-

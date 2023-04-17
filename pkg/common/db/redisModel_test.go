@@ -3,7 +3,7 @@ package db
 import (
 	"Open_IM/pkg/common/constant"
 	pbChat "Open_IM/pkg/proto/msg"
-	server_api_params "Open_IM/pkg/proto/sdk_ws"
+	sdk_ws "Open_IM/pkg/proto/sdk_ws"
 	"context"
 	"flag"
 	"fmt"
@@ -52,14 +52,14 @@ func Test_HGetAll(t *testing.T) {
 func Test_NewSetMessageToCache(t *testing.T) {
 	var msg pbChat.MsgDataToMQ
 	m := make(map[string]bool)
-	var offlinePush server_api_params.OfflinePushInfo
+	var offlinePush sdk_ws.OfflinePushInfo
 	offlinePush.Title = "3"
 	offlinePush.Ex = "34"
 	offlinePush.IOSPushSound = "+1"
 	offlinePush.IOSBadgeCount = true
 	m[constant.IsPersistent] = true
 	m[constant.IsHistory] = true
-	var data server_api_params.MsgData
+	var data sdk_ws.MsgData
 	uid := "test_uid"
 	data.Seq = 11
 	data.ClientMsgID = "23jwhjsdf"
@@ -78,7 +78,7 @@ func Test_NewSetMessageToCache(t *testing.T) {
 }
 func Test_NewGetMessageListBySeq(t *testing.T) {
 	var msg pbChat.MsgDataToMQ
-	var data server_api_params.MsgData
+	var data sdk_ws.MsgData
 	uid := "test_uid"
 	data.Seq = 11
 	data.ClientMsgID = "23jwhjsdf"
