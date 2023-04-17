@@ -1,9 +1,9 @@
 package im_mysql_model
 
 import (
-	"Open_IM/pkg/common/db"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/utils"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 )
 
 func SetConversation(conversation db.Conversation) (bool, error) {

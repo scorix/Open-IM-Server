@@ -1,17 +1,17 @@
 package cms_api
 
 import (
-	"Open_IM/internal/cms_api/admin"
-	"Open_IM/internal/cms_api/friend"
-	"Open_IM/internal/cms_api/group"
-	messageCMS "Open_IM/internal/cms_api/message_cms"
-	"Open_IM/internal/cms_api/middleware"
-	"Open_IM/internal/cms_api/statistics"
-	"Open_IM/internal/cms_api/user"
-	"Open_IM/internal/demo/register"
-	"Open_IM/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/cms_api/admin"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/cms_api/friend"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/cms_api/group"
+	messageCMS "github.com/OpenIMSDK/Open-IM-Server/internal/cms_api/message_cms"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/cms_api/middleware"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/cms_api/statistics"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/cms_api/user"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/demo/register"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
 
-	promePkg "Open_IM/pkg/common/prometheus"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
 
 	"github.com/gin-gonic/gin"
 )

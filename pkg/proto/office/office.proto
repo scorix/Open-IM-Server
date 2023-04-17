@@ -3,7 +3,7 @@ package office;
 
 import "sdk_ws/ws.proto";
 
-option go_package = "Open_IM/pkg/proto/office;office";
+option go_package = "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/office;office";
 
 message CommonResp {
   int32 errCode = 1;
@@ -38,9 +38,7 @@ message CreateTagReq {
   string operationID = 4;
 }
 
-message CreateTagResp {
-  CommonResp commonResp = 1;
-}
+message CreateTagResp { CommonResp commonResp = 1; }
 
 message DeleteTagReq {
   string userID = 1;
@@ -48,9 +46,7 @@ message DeleteTagReq {
   string operationID = 3;
 }
 
-message DeleteTagResp {
-  CommonResp commonResp = 1;
-}
+message DeleteTagResp { CommonResp commonResp = 1; }
 
 message SetTagReq {
   string userID = 1;
@@ -61,9 +57,7 @@ message SetTagReq {
   string operationID = 6;
 }
 
-message SetTagResp {
-  CommonResp commonResp = 1;
-}
+message SetTagResp { CommonResp commonResp = 1; }
 
 message SendMsg2TagReq {
   repeated string tagList = 1;
@@ -75,9 +69,7 @@ message SendMsg2TagReq {
   string operationID = 7;
 }
 
-message SendMsg2TagResp {
-  CommonResp commonResp = 1;
-}
+message SendMsg2TagResp { CommonResp commonResp = 1; }
 
 message GetTagSendLogsReq {
   sdk_ws.RequestPagination Pagination = 1;
@@ -161,9 +153,7 @@ message CreateOneWorkMomentReq {
   string operationID = 2;
 }
 
-message CreateOneWorkMomentResp {
-  CommonResp commonResp = 1;
-}
+message CreateOneWorkMomentResp { CommonResp commonResp = 1; }
 
 message DeleteOneWorkMomentReq {
   string workMomentID = 1;
@@ -171,9 +161,7 @@ message DeleteOneWorkMomentReq {
   string operationID = 3;
 }
 
-message DeleteOneWorkMomentResp {
-  CommonResp commonResp = 1;
-}
+message DeleteOneWorkMomentResp { CommonResp commonResp = 1; }
 
 message LikeOneWorkMomentReq {
   string userID = 1;
@@ -181,9 +169,7 @@ message LikeOneWorkMomentReq {
   string operationID = 3;
 }
 
-message LikeOneWorkMomentResp {
-  CommonResp commonResp = 1;
-}
+message LikeOneWorkMomentResp { CommonResp commonResp = 1; }
 
 message CommentOneWorkMomentReq {
   string userID = 1;
@@ -193,9 +179,7 @@ message CommentOneWorkMomentReq {
   string operationID = 5;
 }
 
-message CommentOneWorkMomentResp {
-  CommonResp commonResp = 1;
-}
+message CommentOneWorkMomentResp { CommonResp commonResp = 1; }
 
 message DeleteCommentReq {
   string workMomentID = 1;
@@ -204,9 +188,7 @@ message DeleteCommentReq {
   string operationID = 4;
 }
 
-message DeleteCommentResp {
-  CommonResp commonResp = 1;
-}
+message DeleteCommentResp { CommonResp commonResp = 1; }
 
 message GetWorkMomentByIDReq {
   string workMomentID = 1;
@@ -227,9 +209,7 @@ message ChangeWorkMomentPermissionReq {
   string operationID = 5;
 }
 
-message ChangeWorkMomentPermissionResp {
-  CommonResp commonResp = 1;
-}
+message ChangeWorkMomentPermissionResp { CommonResp commonResp = 1; }
 
 message GetUserWorkMomentsReq {
   string userID = 1;
@@ -276,9 +256,7 @@ message SetUserWorkMomentsLevelReq {
   string operationID = 3;
 }
 
-message SetUserWorkMomentsLevelResp {
-  CommonResp commonResp = 1;
-}
+message SetUserWorkMomentsLevelResp { CommonResp commonResp = 1; }
 
 service OfficeService {
   rpc GetUserTags(GetUserTagsReq) returns (GetUserTagsResp);
@@ -289,16 +267,23 @@ service OfficeService {
   rpc GetTagSendLogs(GetTagSendLogsReq) returns (GetTagSendLogsResp);
   rpc GetUserTagByID(GetUserTagByIDReq) returns (GetUserTagByIDResp);
 
-  rpc CreateOneWorkMoment(CreateOneWorkMomentReq) returns (CreateOneWorkMomentResp);
-  rpc DeleteOneWorkMoment(DeleteOneWorkMomentReq) returns (DeleteOneWorkMomentResp);
+  rpc CreateOneWorkMoment(CreateOneWorkMomentReq)
+      returns (CreateOneWorkMomentResp);
+  rpc DeleteOneWorkMoment(DeleteOneWorkMomentReq)
+      returns (DeleteOneWorkMomentResp);
   rpc LikeOneWorkMoment(LikeOneWorkMomentReq) returns (LikeOneWorkMomentResp);
-  rpc CommentOneWorkMoment(CommentOneWorkMomentReq) returns (CommentOneWorkMomentResp);
+  rpc CommentOneWorkMoment(CommentOneWorkMomentReq)
+      returns (CommentOneWorkMomentResp);
   rpc DeleteComment(DeleteCommentReq) returns (DeleteCommentResp);
   rpc GetWorkMomentByID(GetWorkMomentByIDReq) returns (GetWorkMomentByIDResp);
-  rpc ChangeWorkMomentPermission(ChangeWorkMomentPermissionReq) returns (ChangeWorkMomentPermissionResp);
+  rpc ChangeWorkMomentPermission(ChangeWorkMomentPermissionReq)
+      returns (ChangeWorkMomentPermissionResp);
   /// user self
-  rpc GetUserWorkMoments(GetUserWorkMomentsReq) returns (GetUserWorkMomentsResp);
+  rpc GetUserWorkMoments(GetUserWorkMomentsReq)
+      returns (GetUserWorkMomentsResp);
   /// users friend
-  rpc GetUserFriendWorkMoments(GetUserFriendWorkMomentsReq) returns (GetUserFriendWorkMomentsResp);
-  rpc SetUserWorkMomentsLevel(SetUserWorkMomentsLevelReq) returns (SetUserWorkMomentsLevelResp);
+  rpc GetUserFriendWorkMoments(GetUserFriendWorkMomentsReq)
+      returns (GetUserFriendWorkMomentsResp);
+  rpc SetUserWorkMomentsLevel(SetUserWorkMomentsLevelReq)
+      returns (SetUserWorkMomentsLevelResp);
 }

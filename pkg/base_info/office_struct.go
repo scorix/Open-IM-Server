@@ -1,7 +1,7 @@
 package base_info
 
 import (
-	pbOffice "Open_IM/pkg/proto/office"
+	pbOffice "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/office"
 )
 
 type GetUserTagsReq struct {

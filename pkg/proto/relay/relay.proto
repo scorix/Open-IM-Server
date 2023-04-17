@@ -3,16 +3,14 @@ package relay;
 
 import "sdk_ws/ws.proto";
 
-option go_package = "Open_IM/pkg/proto/relay;pbRelay";
+option go_package = "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/relay;pbRelay";
 
 message OnlinePushMsgReq {
   string OperationID = 1;
   sdk_ws.MsgData msgData = 2;
   string pushToUserID = 3;
 }
-message OnlinePushMsgResp {
-  repeated SingleMsgToUserPlatform resp = 1;
-}
+message OnlinePushMsgResp { repeated SingleMsgToUserPlatform resp = 1; }
 message SingelMsgToUserResultList {
   string userID = 1;
   repeated SingleMsgToUserPlatform resp = 2;
@@ -26,17 +24,17 @@ message OnlineBatchPushOneMsgReq {
 message OnlineBatchPushOneMsgResp {
   repeated SingelMsgToUserResultList singlePushResult = 1;
 }
-//message SendMsgByWSReq{
-//  string SendID = 1;
-//  string RecvID = 2;
-//  string Content = 3;
-//  int64 SendTime = 4;
-//  int64  MsgFrom = 5;
-//  int64  ContentType = 6;
-//  int64  SessionType = 7;
-//  string OperationID = 8;
-//  int64  PlatformID = 9;
-//}
+// message SendMsgByWSReq{
+//   string SendID = 1;
+//   string RecvID = 2;
+//   string Content = 3;
+//   int64 SendTime = 4;
+//   int64  MsgFrom = 5;
+//   int64  ContentType = 6;
+//   int64  SessionType = 7;
+//   string OperationID = 8;
+//   int64  PlatformID = 9;
+// }
 
 message SingleMsgToUserPlatform {
   int64 ResultCode = 1;
@@ -90,10 +88,15 @@ message MultiTerminalLoginCheckResp {
 
 service relay {
   rpc OnlinePushMsg(OnlinePushMsgReq) returns (OnlinePushMsgResp);
-  rpc GetUsersOnlineStatus(GetUsersOnlineStatusReq) returns (GetUsersOnlineStatusResp);
-  rpc OnlineBatchPushOneMsg(OnlineBatchPushOneMsgReq) returns (OnlineBatchPushOneMsgResp);
-  rpc SuperGroupOnlineBatchPushOneMsg(OnlineBatchPushOneMsgReq) returns (OnlineBatchPushOneMsgResp);
+  rpc GetUsersOnlineStatus(GetUsersOnlineStatusReq)
+      returns (GetUsersOnlineStatusResp);
+  rpc OnlineBatchPushOneMsg(OnlineBatchPushOneMsgReq)
+      returns (OnlineBatchPushOneMsgResp);
+  rpc SuperGroupOnlineBatchPushOneMsg(OnlineBatchPushOneMsgReq)
+      returns (OnlineBatchPushOneMsgResp);
   rpc KickUserOffline(KickUserOfflineReq) returns (KickUserOfflineResp);
-  rpc MultiTerminalLoginCheck(MultiTerminalLoginCheckReq) returns (MultiTerminalLoginCheckResp);
-  rpc SuperGroupBackgroundOnlinePush(OnlineBatchPushOneMsgReq) returns (OnlineBatchPushOneMsgResp);
+  rpc MultiTerminalLoginCheck(MultiTerminalLoginCheckReq)
+      returns (MultiTerminalLoginCheckResp);
+  rpc SuperGroupBackgroundOnlinePush(OnlineBatchPushOneMsgReq)
+      returns (OnlineBatchPushOneMsgResp);
 }

@@ -1,10 +1,11 @@
 package im_mysql_model
 
 import (
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db"
-	"Open_IM/pkg/utils"
 	"fmt"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"time"
 )

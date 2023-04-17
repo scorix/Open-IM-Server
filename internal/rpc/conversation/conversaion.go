@@ -1,24 +1,25 @@
 package conversation
 
 import (
-	chat "Open_IM/internal/rpc/msg"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db"
-	imdb "Open_IM/pkg/common/db/mysql_model/im_mysql_model"
-	rocksCache "Open_IM/pkg/common/db/rocks_cache"
-	"Open_IM/pkg/common/log"
-	promePkg "Open_IM/pkg/common/prometheus"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	pbConversation "Open_IM/pkg/proto/conversation"
-	"Open_IM/pkg/utils"
 	"context"
 	"net"
 	"strconv"
 	"strings"
 
+	chat "github.com/OpenIMSDK/Open-IM-Server/internal/rpc/msg"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	imdb "github.com/OpenIMSDK/Open-IM-Server/pkg/common/db/mysql_model/im_mysql_model"
+	rocksCache "github.com/OpenIMSDK/Open-IM-Server/pkg/common/db/rocks_cache"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	pbConversation "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/conversation"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
+
 	grpcPrometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 
-	"Open_IM/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
 
 	"google.golang.org/grpc"
 )

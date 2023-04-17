@@ -3,7 +3,7 @@ package pbAuth;
 
 import "sdk_ws/ws.proto";
 
-option go_package = "Open_IM/pkg/proto/auth;pbAuth";
+option go_package = "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/auth;pbAuth";
 
 message CommonResp {
   int32 errCode = 1;
@@ -14,9 +14,7 @@ message UserRegisterReq {
   sdk_ws.UserInfo UserInfo = 1;
   string OperationID = 2;
 }
-message UserRegisterResp {
-  CommonResp CommonResp = 1;
-}
+message UserRegisterResp { CommonResp CommonResp = 1; }
 
 message UserTokenReq {
   int32 Platform = 1;
@@ -37,9 +35,7 @@ message ForceLogoutReq {
   string OpUserID = 3;
   string OperationID = 4;
 }
-message ForceLogoutResp {
-  CommonResp CommonResp = 1;
-}
+message ForceLogoutResp { CommonResp CommonResp = 1; }
 
 message ParseTokenReq {
   string token = 1;

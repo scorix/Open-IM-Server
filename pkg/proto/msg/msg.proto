@@ -4,7 +4,7 @@ package msg;
 import "google/protobuf/wrappers.proto";
 import "sdk_ws/ws.proto";
 
-option go_package = "Open_IM/pkg/proto/msg;msg";
+option go_package = "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/msg;msg";
 
 message MsgDataToMQ {
   string token = 1;
@@ -28,26 +28,26 @@ message MsgDataToMongoByMQ {
   string triggerID = 4;
 }
 
-//message PullMessageReq {
-//  string UserID = 1;
-//  int64 SeqBegin = 2;
-//  int64 SeqEnd = 3;
-//  string OperationID = 4;
-//}
+// message PullMessageReq {
+//   string UserID = 1;
+//   int64 SeqBegin = 2;
+//   int64 SeqEnd = 3;
+//   string OperationID = 4;
+// }
 //
-//message PullMessageResp {
-//  int32 ErrCode = 1;
-//  string ErrMsg = 2;
-//  int64 MaxSeq = 3;
-//  int64 MinSeq = 4;
-//  repeated GatherFormat SingleUserMsg = 5;
-//  repeated GatherFormat GroupUserMsg = 6;
-//}
-//message PullMessageBySeqListReq{
-//  string UserID = 1;
-//  string OperationID = 2;
-//  repeated int64 seqList =3;
-//}
+// message PullMessageResp {
+//   int32 ErrCode = 1;
+//   string ErrMsg = 2;
+//   int64 MaxSeq = 3;
+//   int64 MinSeq = 4;
+//   repeated GatherFormat SingleUserMsg = 5;
+//   repeated GatherFormat GroupUserMsg = 6;
+// }
+// message PullMessageBySeqListReq{
+//   string UserID = 1;
+//   string OperationID = 2;
+//   repeated int64 seqList =3;
+// }
 message GetMaxAndMinSeqReq {
   string UserID = 1;
   string OperationID = 2;
@@ -107,9 +107,7 @@ message SetSendMsgStatusResp {
   string errMsg = 2;
 }
 
-message GetSendMsgStatusReq {
-  string operationID = 1;
-}
+message GetSendMsgStatusReq { string operationID = 1; }
 
 message GetSendMsgStatusResp {
   int32 errCode = 1;
@@ -282,8 +280,10 @@ message MsgDataToModifyByMQ {
 }
 
 service msg {
-  rpc GetMaxAndMinSeq(sdk_ws.GetMaxAndMinSeqReq) returns (sdk_ws.GetMaxAndMinSeqResp);
-  rpc PullMessageBySeqList(sdk_ws.PullMessageBySeqListReq) returns (sdk_ws.PullMessageBySeqListResp);
+  rpc GetMaxAndMinSeq(sdk_ws.GetMaxAndMinSeqReq)
+      returns (sdk_ws.GetMaxAndMinSeqResp);
+  rpc PullMessageBySeqList(sdk_ws.PullMessageBySeqListReq)
+      returns (sdk_ws.PullMessageBySeqListResp);
   rpc SendMsg(SendMsgReq) returns (SendMsgResp);
   rpc DelMsgList(sdk_ws.DelMsgListReq) returns (sdk_ws.DelMsgListResp);
   rpc DelSuperGroupMsg(DelSuperGroupMsgReq) returns (DelSuperGroupMsgResp);
@@ -295,8 +295,12 @@ service msg {
   rpc GetWriteDiffMsg(GetWriteDiffMsgReq) returns (GetWriteDiffMsgResp);
 
   // modify msg
-  rpc SetMessageReactionExtensions(SetMessageReactionExtensionsReq) returns (SetMessageReactionExtensionsResp);
-  rpc GetMessageListReactionExtensions(GetMessageListReactionExtensionsReq) returns (GetMessageListReactionExtensionsResp);
-  rpc AddMessageReactionExtensions(AddMessageReactionExtensionsReq) returns (AddMessageReactionExtensionsResp);
-  rpc DeleteMessageReactionExtensions(DeleteMessageListReactionExtensionsReq) returns (DeleteMessageListReactionExtensionsResp);
+  rpc SetMessageReactionExtensions(SetMessageReactionExtensionsReq)
+      returns (SetMessageReactionExtensionsResp);
+  rpc GetMessageListReactionExtensions(GetMessageListReactionExtensionsReq)
+      returns (GetMessageListReactionExtensionsResp);
+  rpc AddMessageReactionExtensions(AddMessageReactionExtensionsReq)
+      returns (AddMessageReactionExtensionsResp);
+  rpc DeleteMessageReactionExtensions(DeleteMessageListReactionExtensionsReq)
+      returns (DeleteMessageListReactionExtensionsResp);
 }

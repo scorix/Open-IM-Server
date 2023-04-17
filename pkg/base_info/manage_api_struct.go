@@ -1,9 +1,9 @@
 package base_info
 
 import (
-	pbRelay "Open_IM/pkg/proto/relay"
-	sdk_ws "Open_IM/pkg/proto/sdk_ws"
-	pbUser "Open_IM/pkg/proto/user"
+	pbRelay "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/relay"
+	sdk_ws "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
+	pbUser "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/user"
 )
 
 type DeleteUsersReq struct {

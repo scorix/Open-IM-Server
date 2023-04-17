@@ -1,19 +1,22 @@
 package db
 
 import (
-	"Open_IM/pkg/common/config"
-	"github.com/dtm-labs/rockscache"
-	"go.mongodb.org/mongo-driver/x/bsonx"
 	"strings"
 
-	//"Open_IM/pkg/common/log"
-	"Open_IM/pkg/utils"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/dtm-labs/rockscache"
+	"go.mongodb.org/mongo-driver/x/bsonx"
+
+	//"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
 	"fmt"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 	go_redis "github.com/go-redis/redis/v8"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"gopkg.in/mgo.v2"
 	"time"
+
+	"gopkg.in/mgo.v2"
 
 	"context"
 	//"go.mongodb.org/mongo-driver/bson"

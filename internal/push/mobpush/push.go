@@ -1,14 +1,15 @@
 package mobpush
 
 import (
-	"Open_IM/internal/push"
-	"Open_IM/internal/push/mobpush/common"
-	"Open_IM/internal/push/mobpush/requestParams"
-	"Open_IM/pkg/common/config"
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
 	"strings"
+
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push/mobpush/common"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push/mobpush/requestParams"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
 )
 
 var (

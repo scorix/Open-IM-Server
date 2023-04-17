@@ -1,6 +1,6 @@
 package base_info
 
-import open_im_sdk "Open_IM/pkg/proto/sdk_ws"
+import open_im_sdk "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
 
 type CreateDepartmentReq struct {
 	*open_im_sdk.Department

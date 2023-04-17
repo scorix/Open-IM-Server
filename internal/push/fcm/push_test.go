@@ -1,9 +1,10 @@
 package fcm
 
 import (
-	"Open_IM/internal/push"
 	"fmt"
 	"testing"
+
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push"
 
 	"github.com/stretchr/testify/assert"
 )

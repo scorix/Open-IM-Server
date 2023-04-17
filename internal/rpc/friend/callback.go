@@ -1,15 +1,17 @@
 package friend
 
 import (
-	cbApi "Open_IM/pkg/call_back_struct"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/http"
-	"Open_IM/pkg/common/log"
-	pbFriend "Open_IM/pkg/proto/friend"
-	//"Open_IM/pkg/proto/msg"
-	"Open_IM/pkg/utils"
+	cbApi "github.com/OpenIMSDK/Open-IM-Server/pkg/call_back_struct"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/http"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	pbFriend "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/friend"
+
+	//"github.com/OpenIMSDK/Open-IM-Server/pkg/proto/msg"
 	http2 "net/http"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 )
 
 func callbackBeforeAddFriend(req *pbFriend.AddFriendReq) cbApi.CommonCallbackResp {

@@ -1,15 +1,16 @@
 package db
 
 import (
-	"Open_IM/pkg/common/config"
-	sdk_ws "Open_IM/pkg/proto/sdk_ws"
-	"Open_IM/pkg/utils"
 	"context"
 	"errors"
 	"fmt"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	sdk_ws "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"

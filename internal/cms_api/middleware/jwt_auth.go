@@ -1,11 +1,12 @@
 package middleware
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/common/token_verify"
-	"Open_IM/pkg/utils"
 	"net/http"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/token_verify"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

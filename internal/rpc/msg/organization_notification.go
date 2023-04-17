@@ -1,13 +1,13 @@
 package msg
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	imdb "Open_IM/pkg/common/db/mysql_model/im_mysql_model"
-	"Open_IM/pkg/common/log"
-	utils2 "Open_IM/pkg/common/utils"
-	open_im_sdk "Open_IM/pkg/proto/sdk_ws"
-	"Open_IM/pkg/utils"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	imdb "github.com/OpenIMSDK/Open-IM-Server/pkg/common/db/mysql_model/im_mysql_model"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	utils2 "github.com/OpenIMSDK/Open-IM-Server/pkg/common/utils"
+	open_im_sdk "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/golang/protobuf/proto"

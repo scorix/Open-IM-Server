@@ -1,9 +1,10 @@
 package db
 
 import (
-	"Open_IM/pkg/common/config"
 	"fmt"
 	"time"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

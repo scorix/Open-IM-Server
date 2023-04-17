@@ -1,8 +1,8 @@
 package cms_api_struct
 
 import (
-	"Open_IM/pkg/base_info"
-	sdk_ws "Open_IM/pkg/proto/sdk_ws"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/base_info"
+	sdk_ws "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
 )
 
 type AdminLoginRequest struct {

@@ -1,8 +1,9 @@
 package log
 
 import (
-	"Open_IM/pkg/common/config"
 	"bufio"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
 
 	//"bufio"
 	"fmt"

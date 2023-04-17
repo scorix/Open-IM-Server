@@ -1,8 +1,9 @@
 package token_verify
 
 import (
-	"Open_IM/pkg/common/constant"
 	"testing"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

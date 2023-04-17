@@ -1,6 +1,6 @@
 package base_info
 
-import "Open_IM/pkg/proto/office"
+import "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/office"
 
 type CreateOneWorkMomentReq struct {
 	office.CreateOneWorkMomentReq

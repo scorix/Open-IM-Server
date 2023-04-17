@@ -19,7 +19,7 @@ done
 
 for ((i = 0; i < ${#filelist[*]}; i++)); do
   proto=${filelist[$i]}
-  cp $proto  ${proto#*./Open_IM/pkg/proto/}
+  cp $proto  ${proto#*./github.com/OpenIMSDK/Open-IM-Server/pkg/proto/}
 done
 rm Open_IM -rf
 #find ./ -type f -path "*.pb.go"|xargs sed -i 's/\".\/sdk_ws\"/\"Open_IM\/pkg\/proto\/sdk_ws\"/g'

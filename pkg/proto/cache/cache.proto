@@ -1,7 +1,7 @@
 syntax = "proto3";
 package cache;
 
-option go_package = "Open_IM/pkg/proto/cache;cache";
+option go_package = "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/cache;cache";
 
 message CommonResp {
   int32 errCode = 1;
@@ -23,9 +23,7 @@ message DelFriendIDListFromCacheReq {
   string operationID = 2;
 }
 
-message DelFriendIDListFromCacheResp {
-  CommonResp commonResp = 1;
-}
+message DelFriendIDListFromCacheResp { CommonResp commonResp = 1; }
 
 message GetBlackIDListFromCacheReq {
   string userID = 1;
@@ -42,9 +40,7 @@ message DelBlackIDListFromCacheReq {
   string operationID = 2;
 }
 
-message DelBlackIDListFromCacheResp {
-  CommonResp commonResp = 1;
-}
+message DelBlackIDListFromCacheResp { CommonResp commonResp = 1; }
 
 message GetGroupMemberIDListFromCacheReq {
   string operationID = 1;
@@ -61,26 +57,30 @@ message DelGroupMemberIDListFromCacheReq {
   string operationID = 2;
 }
 
-message DelGroupMemberIDListFromCacheResp {
-  CommonResp commonResp = 1;
-}
+message DelGroupMemberIDListFromCacheResp { CommonResp commonResp = 1; }
 
 service cache {
   // friendInfo
-  rpc GetFriendIDListFromCache(GetFriendIDListFromCacheReq) returns (GetFriendIDListFromCacheResp);
+  rpc GetFriendIDListFromCache(GetFriendIDListFromCacheReq)
+      returns (GetFriendIDListFromCacheResp);
 
   // for dtm
-  rpc DelFriendIDListFromCache(DelFriendIDListFromCacheReq) returns (DelFriendIDListFromCacheResp);
+  rpc DelFriendIDListFromCache(DelFriendIDListFromCacheReq)
+      returns (DelFriendIDListFromCacheResp);
 
   // blackList
-  rpc GetBlackIDListFromCache(GetBlackIDListFromCacheReq) returns (GetBlackIDListFromCacheResp);
+  rpc GetBlackIDListFromCache(GetBlackIDListFromCacheReq)
+      returns (GetBlackIDListFromCacheResp);
 
   // for dtm
-  rpc DelBlackIDListFromCache(DelBlackIDListFromCacheReq) returns (DelBlackIDListFromCacheResp);
+  rpc DelBlackIDListFromCache(DelBlackIDListFromCacheReq)
+      returns (DelBlackIDListFromCacheResp);
 
   // group
-  rpc GetGroupMemberIDListFromCache(GetGroupMemberIDListFromCacheReq) returns (GetGroupMemberIDListFromCacheResp);
+  rpc GetGroupMemberIDListFromCache(GetGroupMemberIDListFromCacheReq)
+      returns (GetGroupMemberIDListFromCacheResp);
 
   // for dtm
-  rpc DelGroupMemberIDListFromCache(DelGroupMemberIDListFromCacheReq) returns (DelGroupMemberIDListFromCacheResp);
+  rpc DelGroupMemberIDListFromCache(DelGroupMemberIDListFromCacheReq)
+      returns (DelGroupMemberIDListFromCacheResp);
 }

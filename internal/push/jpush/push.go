@@ -1,14 +1,15 @@
 package push
 
 import (
-	"Open_IM/internal/push"
-	"Open_IM/internal/push/jpush/common"
-	"Open_IM/internal/push/jpush/requestBody"
-	"Open_IM/pkg/common/config"
 	"bytes"
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
+
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push/jpush/common"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push/jpush/requestBody"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
 )
 
 var (

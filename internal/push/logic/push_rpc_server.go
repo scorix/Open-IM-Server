@@ -1,18 +1,19 @@
 package logic
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db"
-	"Open_IM/pkg/common/log"
-	promePkg "Open_IM/pkg/common/prometheus"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	pbPush "Open_IM/pkg/proto/push"
-	"Open_IM/pkg/utils"
 	"context"
 	"net"
 	"strconv"
 	"strings"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	pbPush "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/push"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	grpcPrometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 	"google.golang.org/grpc"

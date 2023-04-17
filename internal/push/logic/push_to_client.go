@@ -7,21 +7,22 @@
 package logic
 
 import (
-	"Open_IM/internal/push"
-	utils2 "Open_IM/internal/utils"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	pbPush "Open_IM/pkg/proto/push"
-	pbRelay "Open_IM/pkg/proto/relay"
-	pbRtc "Open_IM/pkg/proto/rtc"
-	"Open_IM/pkg/utils"
 	"context"
 	"strings"
 
-	promePkg "Open_IM/pkg/common/prometheus"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push"
+	utils2 "github.com/OpenIMSDK/Open-IM-Server/internal/utils"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	pbPush "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/push"
+	pbRelay "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/relay"
+	pbRtc "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/rtc"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
+
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
 
 	"github.com/golang/protobuf/proto"
 )

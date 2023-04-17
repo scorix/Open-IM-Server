@@ -1,14 +1,15 @@
 package apiThird
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/utils"
 	"context"
 	"fmt"
+	url2 "net/url"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
-	url2 "net/url"
 )
 
 var (

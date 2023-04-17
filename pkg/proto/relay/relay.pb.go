@@ -7,7 +7,7 @@
 package pbRelay
 
 import (
-	sdk_ws "Open_IM/pkg/proto/sdk_ws"
+	sdk_ws "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

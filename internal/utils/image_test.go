@@ -1,11 +1,12 @@
 package utils
 
 import (
-	"Open_IM/pkg/utils"
 	"os"
 	"path/filepath"
 	"runtime"
 	"testing"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

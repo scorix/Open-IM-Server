@@ -1,24 +1,25 @@
 package register
 
 import (
-	"Open_IM/internal/api/manage"
-	"Open_IM/internal/rpc/msg"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	imdb "Open_IM/pkg/common/db/mysql_model/im_mysql_model"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	groupRpc "Open_IM/pkg/proto/group"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/api/manage"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/rpc/msg"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	imdb "github.com/OpenIMSDK/Open-IM-Server/pkg/common/db/mysql_model/im_mysql_model"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	groupRpc "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/group"
 
-	organizationRpc "Open_IM/pkg/proto/organization"
-	commonPb "Open_IM/pkg/proto/sdk_ws"
-	"Open_IM/pkg/utils"
 	"context"
 	"errors"
 	"fmt"
 	"math/rand"
 	"strings"
 	"time"
+
+	organizationRpc "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/organization"
+	commonPb "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"github.com/golang/protobuf/proto"
 )

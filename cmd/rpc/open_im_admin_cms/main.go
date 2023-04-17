@@ -1,12 +1,13 @@
 package main
 
 import (
-	rpcMessageCMS "Open_IM/internal/rpc/admin_cms"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	promePkg "Open_IM/pkg/common/prometheus"
 	"flag"
 	"fmt"
+
+	rpcMessageCMS "github.com/OpenIMSDK/Open-IM-Server/internal/rpc/admin_cms"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
 )
 
 func main() {

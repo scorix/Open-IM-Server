@@ -1,13 +1,14 @@
 package main
 
 import (
-	"Open_IM/internal/push/logic"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/log"
 	"flag"
 	"fmt"
 	"sync"
+
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push/logic"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
 )
 
 func main() {

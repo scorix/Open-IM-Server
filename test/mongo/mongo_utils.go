@@ -1,11 +1,12 @@
 package mongo
 
 import (
-	"Open_IM/pkg/common/config"
-	sdk_ws "Open_IM/pkg/proto/sdk_ws"
 	"context"
 	"fmt"
 	"time"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	sdk_ws "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
 
 	"github.com/golang/protobuf/proto"
 	"go.mongodb.org/mongo-driver/mongo"

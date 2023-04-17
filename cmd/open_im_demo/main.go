@@ -1,19 +1,20 @@
 package main
 
 import (
-	"Open_IM/internal/demo/register"
-	"Open_IM/pkg/utils"
 	"flag"
 	"fmt"
 	"io"
 	"os"
 	"strconv"
 
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/demo/register"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
-	promePkg "Open_IM/pkg/common/prometheus"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
 
 	"github.com/gin-gonic/gin"
 )

@@ -1,9 +1,10 @@
 package im_mysql_model
 
 import (
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db"
 	"time"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
 )
 
 func GetActiveUserNum(from, to time.Time) (int32, error) {

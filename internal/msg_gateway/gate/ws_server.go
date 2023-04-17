@@ -1,15 +1,6 @@
 package gate
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db"
-	"Open_IM/pkg/common/log"
-	promePkg "Open_IM/pkg/common/prometheus"
-	"Open_IM/pkg/common/token_verify"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	pbRelay "Open_IM/pkg/proto/relay"
-	"Open_IM/pkg/utils"
 	"bytes"
 	"compress/gzip"
 	"context"
@@ -17,6 +8,16 @@ import (
 	"io/ioutil"
 	"strconv"
 	"strings"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/token_verify"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	pbRelay "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/relay"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	go_redis "github.com/go-redis/redis/v8"
 	"github.com/pkg/errors"

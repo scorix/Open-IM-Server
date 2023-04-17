@@ -1,11 +1,11 @@
 package logic
 
 import (
-	tpns "Open_IM/internal/push/sdk/tpns-server-sdk-go/go"
-	"Open_IM/internal/push/sdk/tpns-server-sdk-go/go/auth"
-	"Open_IM/internal/push/sdk/tpns-server-sdk-go/go/common"
-	"Open_IM/internal/push/sdk/tpns-server-sdk-go/go/req"
-	"Open_IM/pkg/common/config"
+	tpns "github.com/OpenIMSDK/Open-IM-Server/internal/push/sdk/tpns-server-sdk-go/go"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push/sdk/tpns-server-sdk-go/go/auth"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push/sdk/tpns-server-sdk-go/go/common"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push/sdk/tpns-server-sdk-go/go/req"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
 )
 
 var badgeType = -2

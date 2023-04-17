@@ -1,15 +1,16 @@
 package logic
 
 import (
-	cbApi "Open_IM/pkg/call_back_struct"
-	"Open_IM/pkg/common/callback"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/http"
-	"Open_IM/pkg/common/log"
-	commonPb "Open_IM/pkg/proto/sdk_ws"
-	"Open_IM/pkg/utils"
 	http2 "net/http"
+
+	cbApi "github.com/OpenIMSDK/Open-IM-Server/pkg/call_back_struct"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/callback"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/http"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	commonPb "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 )
 
 func callbackOfflinePush(operationID string, userIDList []string, msg *commonPb.MsgData, offlinePushUserIDList *[]string) cbApi.CommonCallbackResp {

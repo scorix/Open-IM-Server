@@ -1,14 +1,15 @@
 package db
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/log"
-	promePkg "Open_IM/pkg/common/prometheus"
-	pbMsg "Open_IM/pkg/proto/msg"
-	"Open_IM/pkg/utils"
 	"context"
 	"errors"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
+	pbMsg "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/msg"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 	go_redis "github.com/go-redis/redis/v8"
 	"github.com/golang/protobuf/proto"
 	"go.mongodb.org/mongo-driver/bson"

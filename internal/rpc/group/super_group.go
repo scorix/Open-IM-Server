@@ -1,13 +1,14 @@
 package group
 
 import (
-	rocksCache "Open_IM/pkg/common/db/rocks_cache"
-	"Open_IM/pkg/common/log"
-	cp "Open_IM/pkg/common/utils"
-	pbGroup "Open_IM/pkg/proto/group"
-	commonPb "Open_IM/pkg/proto/sdk_ws"
-	"Open_IM/pkg/utils"
 	"context"
+
+	rocksCache "github.com/OpenIMSDK/Open-IM-Server/pkg/common/db/rocks_cache"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	cp "github.com/OpenIMSDK/Open-IM-Server/pkg/common/utils"
+	pbGroup "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/group"
+	commonPb "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"github.com/go-redis/redis/v8"
 )

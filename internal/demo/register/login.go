@@ -1,15 +1,16 @@
 package register
 
 import (
-	api "Open_IM/pkg/base_info"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db/mysql_model/im_mysql_model"
-	http2 "Open_IM/pkg/common/http"
-	"Open_IM/pkg/common/log"
 	"encoding/json"
 	"fmt"
 	"net/http"
+
+	api "github.com/OpenIMSDK/Open-IM-Server/pkg/base_info"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db/mysql_model/im_mysql_model"
+	http2 "github.com/OpenIMSDK/Open-IM-Server/pkg/common/http"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
 
 	"github.com/gin-gonic/gin"
 )

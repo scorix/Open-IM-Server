@@ -2,13 +2,13 @@ package multi_terminal_login
 
 //
 //import (
-//	"Open_IM/internal/push/content_struct"
-//	"Open_IM/internal/push/logic"
-//	"Open_IM/pkg/common/config"
-//	"Open_IM/pkg/common/constant"
-//	"Open_IM/pkg/common/db"
-//	pbChat "Open_IM/pkg/proto/msg"
-//	"Open_IM/pkg/utils"
+//	"github.com/OpenIMSDK/Open-IM-Server/internal/push/content_struct"
+//	"github.com/OpenIMSDK/Open-IM-Server/internal/push/logic"
+//	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+//	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+//	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+//	pbChat "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/msg"
+//	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 //)
 //
 //const  DayOfSecond = 24*60*60

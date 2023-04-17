@@ -1,8 +1,9 @@
 package im_mysql_msg_model
 
 import (
-	"Open_IM/pkg/common/config"
 	"hash/crc32"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
 )
 
 func getHashMsgDBAddr(userID string) string {

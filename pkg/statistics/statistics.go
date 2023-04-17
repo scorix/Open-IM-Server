@@ -1,8 +1,9 @@
 package statistics
 
 import (
-	"Open_IM/pkg/common/log"
 	"time"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
 )
 
 type Statistics struct {

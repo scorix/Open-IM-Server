@@ -1,15 +1,16 @@
 package msg
 
 import (
-	"Open_IM/pkg/utils"
 	"context"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 	go_redis "github.com/go-redis/redis/v8"
 
-	commonDB "Open_IM/pkg/common/db"
-	"Open_IM/pkg/common/log"
-	open_im_sdk "Open_IM/pkg/proto/sdk_ws"
+	commonDB "github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	open_im_sdk "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
 
-	promePkg "Open_IM/pkg/common/prometheus"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
 )
 
 func (rpc *rpcChat) GetMaxAndMinSeq(_ context.Context, in *open_im_sdk.GetMaxAndMinSeqReq) (*open_im_sdk.GetMaxAndMinSeqResp, error) {

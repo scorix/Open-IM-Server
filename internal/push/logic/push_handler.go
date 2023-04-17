@@ -7,13 +7,13 @@
 package logic
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	kfk "Open_IM/pkg/common/kafka"
-	"Open_IM/pkg/common/log"
-	pbChat "Open_IM/pkg/proto/msg"
-	pbPush "Open_IM/pkg/proto/push"
-	"Open_IM/pkg/utils"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	kfk "github.com/OpenIMSDK/Open-IM-Server/pkg/common/kafka"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	pbChat "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/msg"
+	pbPush "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/push"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 	"github.com/Shopify/sarama"
 	"github.com/golang/protobuf/proto"
 )

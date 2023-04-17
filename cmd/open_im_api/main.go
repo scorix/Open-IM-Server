@@ -1,24 +1,25 @@
 package main
 
 import (
-	_ "Open_IM/cmd/open_im_api/docs"
-	apiAuth "Open_IM/internal/api/auth"
-	clientInit "Open_IM/internal/api/client_init"
-	"Open_IM/internal/api/conversation"
-	"Open_IM/internal/api/friend"
-	"Open_IM/internal/api/group"
-	"Open_IM/internal/api/manage"
-	apiChat "Open_IM/internal/api/msg"
-	"Open_IM/internal/api/office"
-	"Open_IM/internal/api/organization"
-	apiThird "Open_IM/internal/api/third"
-	"Open_IM/internal/api/user"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	"Open_IM/pkg/utils"
 	"flag"
 	"fmt"
+
+	_ "github.com/OpenIMSDK/Open-IM-Server/cmd/open_im_api/docs"
+	apiAuth "github.com/OpenIMSDK/Open-IM-Server/internal/api/auth"
+	clientInit "github.com/OpenIMSDK/Open-IM-Server/internal/api/client_init"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/api/conversation"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/api/friend"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/api/group"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/api/manage"
+	apiChat "github.com/OpenIMSDK/Open-IM-Server/internal/api/msg"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/api/office"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/api/organization"
+	apiThird "github.com/OpenIMSDK/Open-IM-Server/internal/api/third"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/api/user"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	//_ "github.com/razeencheng/demo-go/swaggo-gin/docs"
 	"io"
@@ -30,8 +31,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	//"syscall"
-	"Open_IM/pkg/common/constant"
-	promePkg "Open_IM/pkg/common/prometheus"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
 )
 
 // @title open-IM-Server API

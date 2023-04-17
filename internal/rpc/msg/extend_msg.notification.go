@@ -1,16 +1,17 @@
 package msg
 
 import (
-	"Open_IM/pkg/base_info"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	"Open_IM/pkg/proto/msg"
-	open_im_sdk "Open_IM/pkg/proto/sdk_ws"
-	"Open_IM/pkg/utils"
 	"context"
 	"strings"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/base_info"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/proto/msg"
+	open_im_sdk "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 )
 
 func ExtendMessageUpdatedNotification(operationID, sendID string, sourceID string, senderPlatformID, sessionType int32,

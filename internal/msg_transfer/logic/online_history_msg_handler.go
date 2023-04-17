@@ -1,20 +1,21 @@
 package logic
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db"
-	kfk "Open_IM/pkg/common/kafka"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	pbMsg "Open_IM/pkg/proto/msg"
-	pbPush "Open_IM/pkg/proto/push"
-	"Open_IM/pkg/utils"
 	"context"
 	"hash/crc32"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	kfk "github.com/OpenIMSDK/Open-IM-Server/pkg/common/kafka"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	pbMsg "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/msg"
+	pbPush "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/push"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"github.com/Shopify/sarama"
 	"github.com/golang/protobuf/proto"

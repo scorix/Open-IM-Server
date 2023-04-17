@@ -1,7 +1,7 @@
 syntax = "proto3";
 package proto;
 
-option go_package = "Open_IM/pkg/proto/rtc;rtc";
+option go_package = "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/rtc;rtc";
 
 message CommonResp {
   int32 errCode = 1;
@@ -51,7 +51,7 @@ message GroupMemberFullInfo {
   int32 joinTime = 4;
   string nickname = 5;
   string faceURL = 6;
-  int32 appMangerLevel = 7; //if >0
+  int32 appMangerLevel = 7; // if >0
   int32 joinSource = 8;
   string operatorUserID = 9;
   string ex = 10;
@@ -263,6 +263,7 @@ message SignalGetRoomsResp {
 }
 
 service RtcService {
-  rpc SignalMessageAssemble(SignalMessageAssembleReq) returns (SignalMessageAssembleResp);
+  rpc SignalMessageAssemble(SignalMessageAssembleReq)
+      returns (SignalMessageAssembleResp);
   rpc SignalGetRooms(SignalGetRoomsReq) returns (SignalGetRoomsResp);
 }

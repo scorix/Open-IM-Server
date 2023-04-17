@@ -1,10 +1,10 @@
 package main
 
 import (
-	rpcCache "Open_IM/internal/rpc/cache"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	promePkg "Open_IM/pkg/common/prometheus"
+	rpcCache "github.com/OpenIMSDK/Open-IM-Server/internal/rpc/cache"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
 
 	"flag"
 	"fmt"

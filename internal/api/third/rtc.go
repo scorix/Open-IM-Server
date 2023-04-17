@@ -1,13 +1,14 @@
 package apiThird
 
 import (
-	api "Open_IM/pkg/base_info"
-	"Open_IM/pkg/common/db"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/common/token_verify"
-	"Open_IM/pkg/utils"
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	api "github.com/OpenIMSDK/Open-IM-Server/pkg/base_info"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/token_verify"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
+	"github.com/gin-gonic/gin"
 )
 
 func GetRTCInvitationInfo(c *gin.Context) {

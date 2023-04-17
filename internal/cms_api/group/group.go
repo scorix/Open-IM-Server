@@ -1,17 +1,18 @@
 package group
 
 import (
-	"Open_IM/pkg/cms_api_struct"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	commonPb "Open_IM/pkg/proto/sdk_ws"
-	"Open_IM/pkg/utils"
 	"context"
 	"net/http"
 	"strings"
 
-	pbGroup "Open_IM/pkg/proto/group"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/cms_api_struct"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	commonPb "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
+
+	pbGroup "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/group"
 
 	"github.com/gin-gonic/gin"
 )

@@ -1,13 +1,14 @@
 package cronTask
 
 import (
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db"
-	sdk_ws "Open_IM/pkg/proto/sdk_ws"
-	"Open_IM/pkg/utils"
 	"context"
 	"fmt"
 	"strconv"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	sdk_ws "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"github.com/go-redis/redis/v8"
 	"github.com/golang/protobuf/proto"

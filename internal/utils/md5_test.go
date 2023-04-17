@@ -1,8 +1,9 @@
 package utils
 
 import (
-	"Open_IM/pkg/utils"
 	"testing"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"github.com/stretchr/testify/assert"
 )

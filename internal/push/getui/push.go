@@ -1,14 +1,15 @@
 package getui
 
 import (
-	"Open_IM/internal/push"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/db"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/utils"
 	"bytes"
 	"crypto/sha256"
 	"errors"
+
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	//"crypto/sha512"
 	"encoding/hex"

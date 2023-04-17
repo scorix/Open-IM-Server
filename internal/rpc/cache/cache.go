@@ -1,18 +1,19 @@
 package cache
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	rocksCache "Open_IM/pkg/common/db/rocks_cache"
-	"Open_IM/pkg/common/log"
-	promePkg "Open_IM/pkg/common/prometheus"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	pbCache "Open_IM/pkg/proto/cache"
-	"Open_IM/pkg/utils"
 	"context"
 	"net"
 	"strconv"
 	"strings"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	rocksCache "github.com/OpenIMSDK/Open-IM-Server/pkg/common/db/rocks_cache"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	pbCache "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/cache"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	grpcPrometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 	"google.golang.org/grpc"

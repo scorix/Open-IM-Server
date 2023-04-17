@@ -1,16 +1,17 @@
 package utils
 
 import (
-	"Open_IM/pkg/common/config"
-	rocksCache "Open_IM/pkg/common/db/rocks_cache"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	pbCache "Open_IM/pkg/proto/cache"
-	"Open_IM/pkg/utils"
 	"context"
 	"errors"
 	"strings"
 	"sync"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	rocksCache "github.com/OpenIMSDK/Open-IM-Server/pkg/common/db/rocks_cache"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	pbCache "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/cache"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 )
 
 type GroupMemberUserIDListHash struct {

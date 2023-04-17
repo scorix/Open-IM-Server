@@ -1,16 +1,17 @@
 package register
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db"
-	"Open_IM/pkg/common/db/mysql_model/im_mysql_model"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/common/utils"
 	"fmt"
 	"math/rand"
 	"net/http"
 	"time"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db/mysql_model/im_mysql_model"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/utils"
 
 	"github.com/gin-gonic/gin"
 	"gopkg.in/gomail.v2"

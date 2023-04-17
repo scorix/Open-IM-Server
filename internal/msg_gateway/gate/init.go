@@ -1,14 +1,15 @@
 package gate
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
 
-	"Open_IM/pkg/statistics"
 	"fmt"
 	"sync"
 
-	promePkg "Open_IM/pkg/common/prometheus"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/statistics"
+
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
 
 	"github.com/go-playground/validator/v10"
 )

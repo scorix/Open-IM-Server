@@ -4,7 +4,7 @@ package user;
 import "conversation/conversation.proto";
 import "sdk_ws/ws.proto";
 
-option go_package = "Open_IM/pkg/proto/user;user";
+option go_package = "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/user;user";
 
 message CommonResp {
   int32 errCode = 1;
@@ -49,17 +49,13 @@ message UpdateUserInfoReq {
   string OpUserID = 2;
   string operationID = 3;
 }
-message UpdateUserInfoResp {
-  CommonResp commonResp = 1;
-}
+message UpdateUserInfoResp { CommonResp commonResp = 1; }
 message SetGlobalRecvMessageOptReq {
   string userID = 1;
   string operationID = 2;
   int32 globalRecvMsgOpt = 3;
 }
-message SetGlobalRecvMessageOptResp {
-  CommonResp commonResp = 1;
-}
+message SetGlobalRecvMessageOptResp { CommonResp commonResp = 1; }
 
 message SetConversationReq {
   conversation.Conversation Conversation = 1;
@@ -67,9 +63,7 @@ message SetConversationReq {
   string OperationID = 3;
 }
 
-message SetConversationResp {
-  CommonResp commonResp = 1;
-}
+message SetConversationResp { CommonResp commonResp = 1; }
 
 message SetRecvMsgOptReq {
   string OwnerUserID = 1;
@@ -79,9 +73,7 @@ message SetRecvMsgOptReq {
   string OperationID = 5;
 }
 
-message SetRecvMsgOptResp {
-  CommonResp commonResp = 1;
-}
+message SetRecvMsgOptResp { CommonResp commonResp = 1; }
 
 message GetConversationReq {
   string ConversationID = 1;
@@ -153,9 +145,7 @@ message AddUserReq {
   string operationID = 2;
 }
 
-message AddUserResp {
-  CommonResp CommonResp = 1;
-}
+message AddUserResp { CommonResp CommonResp = 1; }
 
 message BlockUserReq {
   string userID = 1;
@@ -164,9 +154,7 @@ message BlockUserReq {
   string opUserID = 4;
 }
 
-message BlockUserResp {
-  CommonResp CommonResp = 1;
-}
+message BlockUserResp { CommonResp CommonResp = 1; }
 
 message UnBlockUserReq {
   string userID = 1;
@@ -174,9 +162,7 @@ message UnBlockUserReq {
   string opUserID = 3;
 }
 
-message UnBlockUserResp {
-  CommonResp CommonResp = 1;
-}
+message UnBlockUserResp { CommonResp CommonResp = 1; }
 
 message GetBlockUsersReq {
   sdk_ws.RequestPagination pagination = 1;
@@ -201,14 +187,17 @@ message GetBlockUsersResp {
 service user {
   rpc GetUserInfo(GetUserInfoReq) returns (GetUserInfoResp);
   rpc UpdateUserInfo(UpdateUserInfoReq) returns (UpdateUserInfoResp);
-  rpc SetGlobalRecvMessageOpt(SetGlobalRecvMessageOptReq) returns (SetGlobalRecvMessageOptResp);
+  rpc SetGlobalRecvMessageOpt(SetGlobalRecvMessageOptReq)
+      returns (SetGlobalRecvMessageOptResp);
   rpc GetAllUserID(GetAllUserIDReq) returns (GetAllUserIDResp);
 
   rpc AccountCheck(AccountCheckReq) returns (AccountCheckResp);
   rpc GetConversation(GetConversationReq) returns (GetConversationResp);
-  rpc GetAllConversations(GetAllConversationsReq) returns (GetAllConversationsResp);
+  rpc GetAllConversations(GetAllConversationsReq)
+      returns (GetAllConversationsResp);
   rpc GetConversations(GetConversationsReq) returns (GetConversationsResp);
-  rpc BatchSetConversations(BatchSetConversationsReq) returns (BatchSetConversationsResp);
+  rpc BatchSetConversations(BatchSetConversationsReq)
+      returns (BatchSetConversationsResp);
   rpc SetConversation(SetConversationReq) returns (SetConversationResp);
   rpc SetRecvMsgOpt(SetRecvMsgOptReq) returns (SetRecvMsgOptResp);
 

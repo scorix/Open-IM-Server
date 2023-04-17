@@ -1,12 +1,13 @@
 package main
 
 import (
-	rpc "Open_IM/internal/rpc/office"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	promePkg "Open_IM/pkg/common/prometheus"
 	"flag"
 	"fmt"
+
+	rpc "github.com/OpenIMSDK/Open-IM-Server/internal/rpc/office"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
 )
 
 func main() {

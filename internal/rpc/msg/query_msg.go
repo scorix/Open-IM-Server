@@ -1,12 +1,13 @@
 package msg
 
 import (
-	commonDB "Open_IM/pkg/common/db"
-	"Open_IM/pkg/common/log"
-	promePkg "Open_IM/pkg/common/prometheus"
-	"Open_IM/pkg/proto/msg"
-	"Open_IM/pkg/utils"
 	"context"
+
+	commonDB "github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/proto/msg"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 	go_redis "github.com/go-redis/redis/v8"
 )
 

@@ -1,10 +1,11 @@
 package main
 
 import (
-	"Open_IM/internal/cron_task"
 	"flag"
 	"fmt"
 	"time"
+
+	cronTask "github.com/OpenIMSDK/Open-IM-Server/internal/cron_task"
 )
 
 func main() {

@@ -1,21 +1,22 @@
 package register
 
 import (
-	api "Open_IM/pkg/base_info"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db"
-	imdb "Open_IM/pkg/common/db/mysql_model/im_mysql_model"
-	http2 "Open_IM/pkg/common/http"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/common/token_verify"
-	pbFriend "Open_IM/pkg/proto/friend"
-	"Open_IM/pkg/utils"
 	"encoding/json"
 	"math/big"
 	"net/http"
 	"strconv"
 	"time"
+
+	api "github.com/OpenIMSDK/Open-IM-Server/pkg/base_info"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	imdb "github.com/OpenIMSDK/Open-IM-Server/pkg/common/db/mysql_model/im_mysql_model"
+	http2 "github.com/OpenIMSDK/Open-IM-Server/pkg/common/http"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/token_verify"
+	pbFriend "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/friend"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

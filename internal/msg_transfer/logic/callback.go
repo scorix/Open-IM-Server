@@ -1,15 +1,16 @@
 package logic
 
 import (
-	cbApi "Open_IM/pkg/call_back_struct"
-	"Open_IM/pkg/common/callback"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/http"
-	"Open_IM/pkg/common/log"
-	pbChat "Open_IM/pkg/proto/msg"
-	"Open_IM/pkg/utils"
 	http2 "net/http"
+
+	cbApi "github.com/OpenIMSDK/Open-IM-Server/pkg/call_back_struct"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/callback"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/http"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	pbChat "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/msg"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 )
 
 func callbackAfterConsumeGroupMsg(msg []*pbChat.MsgDataToMQ, triggerID string) cbApi.CommonCallbackResp {

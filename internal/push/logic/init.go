@@ -7,17 +7,18 @@
 package logic
 
 import (
-	pusher "Open_IM/internal/push"
-	fcm "Open_IM/internal/push/fcm"
-	"Open_IM/internal/push/getui"
-	jpush "Open_IM/internal/push/jpush"
-	"Open_IM/internal/push/mobpush"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/kafka"
-	promePkg "Open_IM/pkg/common/prometheus"
-	"Open_IM/pkg/statistics"
 	"fmt"
+
+	pusher "github.com/OpenIMSDK/Open-IM-Server/internal/push"
+	fcm "github.com/OpenIMSDK/Open-IM-Server/internal/push/fcm"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push/getui"
+	jpush "github.com/OpenIMSDK/Open-IM-Server/internal/push/jpush"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push/mobpush"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/kafka"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/statistics"
 )
 
 var (

@@ -1,10 +1,11 @@
 package im_mysql_model
 
 import (
-	"Open_IM/pkg/common/db"
-	"Open_IM/pkg/utils"
-	"gorm.io/gorm"
 	"time"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
+	"gorm.io/gorm"
 )
 
 func CreateDepartment(department *db.Department) error {

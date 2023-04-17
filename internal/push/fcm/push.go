@@ -1,14 +1,15 @@
 package fcm
 
 import (
-	"Open_IM/internal/push"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/db"
-	"Open_IM/pkg/common/log"
 	"context"
-	go_redis "github.com/go-redis/redis/v8"
 	"path/filepath"
 	"strconv"
+
+	"github.com/OpenIMSDK/Open-IM-Server/internal/push"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	go_redis "github.com/go-redis/redis/v8"
 
 	firebase "firebase.google.com/go"
 	"firebase.google.com/go/messaging"

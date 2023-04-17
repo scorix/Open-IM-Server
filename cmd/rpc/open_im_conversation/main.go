@@ -1,12 +1,13 @@
 package main
 
 import (
-	rpcConversation "Open_IM/internal/rpc/conversation"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	promePkg "Open_IM/pkg/common/prometheus"
 	"flag"
 	"fmt"
+
+	rpcConversation "github.com/OpenIMSDK/Open-IM-Server/internal/rpc/conversation"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	promePkg "github.com/OpenIMSDK/Open-IM-Server/pkg/common/prometheus"
 )
 
 func main() {

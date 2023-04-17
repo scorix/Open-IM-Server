@@ -1,12 +1,13 @@
 package gate
 
 import (
-	cbApi "Open_IM/pkg/call_back_struct"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/http"
 	http2 "net/http"
 	"time"
+
+	cbApi "github.com/OpenIMSDK/Open-IM-Server/pkg/call_back_struct"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/http"
 )
 
 func callbackUserOnline(operationID, userID string, platformID int, token string, isAppBackground bool, connID string) cbApi.CommonCallbackResp {

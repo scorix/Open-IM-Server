@@ -1,14 +1,15 @@
 package main
 
 import (
-	"Open_IM/internal/cms_api"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/utils"
 	"flag"
 	"fmt"
 	"strconv"
 
-	"Open_IM/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/internal/cms_api"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
 
 	"github.com/gin-gonic/gin"
 )

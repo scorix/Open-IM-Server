@@ -1,8 +1,9 @@
 package requestBody
 
 import (
-	"Open_IM/pkg/common/constant"
 	"errors"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
 )
 
 const (

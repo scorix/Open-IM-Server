@@ -1,13 +1,14 @@
 package register
 
 import (
-	apiStruct "Open_IM/pkg/base_info"
-	"Open_IM/pkg/common/constant"
-	imdb "Open_IM/pkg/common/db/mysql_model/im_mysql_model"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/utils"
 	"net/http"
 	"time"
+
+	apiStruct "github.com/OpenIMSDK/Open-IM-Server/pkg/base_info"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	imdb "github.com/OpenIMSDK/Open-IM-Server/pkg/common/db/mysql_model/im_mysql_model"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

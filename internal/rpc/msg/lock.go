@@ -1,8 +1,9 @@
 package msg
 
 import (
-	"Open_IM/pkg/common/db"
 	"time"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
 )
 
 const GlOBLLOCK = "GLOBAL_LOCK"

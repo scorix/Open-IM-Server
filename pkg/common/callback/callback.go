@@ -1,8 +1,8 @@
 package callback
 
 import (
-	"Open_IM/pkg/common/constant"
-	sdk_ws "Open_IM/pkg/proto/sdk_ws"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	sdk_ws "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
 
 	"github.com/golang/protobuf/proto"
 )

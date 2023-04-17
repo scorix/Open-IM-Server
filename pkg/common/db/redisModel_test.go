@@ -1,13 +1,14 @@
 package db
 
 import (
-	"Open_IM/pkg/common/constant"
-	pbChat "Open_IM/pkg/proto/msg"
-	sdk_ws "Open_IM/pkg/proto/sdk_ws"
 	"context"
 	"flag"
 	"fmt"
 	"testing"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	pbChat "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/msg"
+	sdk_ws "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws"
 
 	"github.com/stretchr/testify/assert"
 )

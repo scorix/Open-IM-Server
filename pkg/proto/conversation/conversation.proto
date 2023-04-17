@@ -1,7 +1,7 @@
 syntax = "proto3";
 package conversation;
 
-option go_package = "Open_IM/pkg/proto/conversation;conversation";
+option go_package = "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/conversation;conversation";
 
 message CommonResp {
   int32 errCode = 1;
@@ -32,9 +32,8 @@ message ModifyConversationFieldReq {
   string operationID = 4;
 }
 
-message ModifyConversationFieldResp {
-  CommonResp commonResp = 1;
-}
+message ModifyConversationFieldResp { CommonResp commonResp = 1; }
 service conversation {
-  rpc ModifyConversationField(ModifyConversationFieldReq) returns (ModifyConversationFieldResp);
+  rpc ModifyConversationField(ModifyConversationFieldReq)
+      returns (ModifyConversationFieldResp);
 }

@@ -1,9 +1,10 @@
 package register
 
 import (
-	"Open_IM/pkg/common/config"
 	"errors"
 	"fmt"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
 	openapi "github.com/alibabacloud-go/darabonba-openapi/client"
 	dysmsapi20170525 "github.com/alibabacloud-go/dysmsapi-20170525/v2/client"
 	"github.com/alibabacloud-go/tea/tea"

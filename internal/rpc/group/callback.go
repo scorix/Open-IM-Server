@@ -1,15 +1,16 @@
 package group
 
 import (
-	cbApi "Open_IM/pkg/call_back_struct"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/db"
-	"Open_IM/pkg/common/http"
-	"Open_IM/pkg/common/log"
-	pbGroup "Open_IM/pkg/proto/group"
-	"Open_IM/pkg/utils"
 	http2 "net/http"
+
+	cbApi "github.com/OpenIMSDK/Open-IM-Server/pkg/call_back_struct"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/db"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/http"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	pbGroup "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/group"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )

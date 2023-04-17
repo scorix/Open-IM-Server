@@ -1,11 +1,12 @@
 package utils
 
 import (
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/constant"
-	"Open_IM/pkg/common/token_verify"
 	"testing"
 	"time"
+
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/constant"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/token_verify"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

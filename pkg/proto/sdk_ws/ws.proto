@@ -3,7 +3,7 @@ package sdk_ws;
 
 import "google/protobuf/wrappers.proto";
 
-option go_package = "Open_IM/pkg/proto/sdk_ws";
+option go_package = "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/sdk_ws";
 
 ////////////////////////////////base///////////////////////////////
 
@@ -46,7 +46,7 @@ message GroupMemberFullInfo {
   int32 joinTime = 4;
   string nickname = 5;
   string faceURL = 6;
-  int32 appMangerLevel = 7; //if >0
+  int32 appMangerLevel = 7; // if >0
   int32 joinSource = 8;
   string operatorUserID = 9;
   string ex = 10;
@@ -178,7 +178,8 @@ message UserInDepartment {
   repeated DepartmentMember departmentMemberList = 2;
 }
 
-///////////////////////////////////organization end//////////////////////////////////
+///////////////////////////////////organization
+///end//////////////////////////////////
 
 ///////////////////////////////////base end/////////////////////////////////////
 message PullMessageBySeqListReq {
@@ -188,13 +189,9 @@ message PullMessageBySeqListReq {
   map<string, seqList> groupSeqList = 4;
 }
 
-message seqList {
-  repeated uint32 seqList = 1;
-}
+message seqList { repeated uint32 seqList = 1; }
 
-message MsgDataList {
-  repeated MsgData msgDataList = 1;
-}
+message MsgDataList { repeated MsgData msgDataList = 1; }
 
 message PullMessageBySeqListResp {
   int32 errCode = 1;
@@ -282,7 +279,7 @@ message GroupCreatedTips {
 
 //	OnGroupInfoSet()
 message GroupInfoSetTips {
-  GroupMemberFullInfo opUser = 1; //who do this
+  GroupMemberFullInfo opUser = 1; // who do this
   int64 muteTime = 2;
   GroupInfo group = 3;
 }
@@ -295,7 +292,7 @@ message JoinGroupApplicationTips {
 }
 
 //	OnQuitGroup()
-//Actively leave the group
+// Actively leave the group
 message MemberQuitTips {
   GroupInfo group = 1;
   GroupMemberFullInfo quitUser = 2;
@@ -342,7 +339,7 @@ message MemberInvitedTips {
   int64 operationTime = 4;
 }
 
-//Actively join the group
+// Actively join the group
 message MemberEnterTips {
   GroupInfo group = 1;
   GroupMemberFullInfo entrantUser = 2;
@@ -395,12 +392,12 @@ message OrganizationChangedTips {
 }
 
 //////////////////////friend/////////////////////
-//message FriendInfo{
-//  UserInfo OwnerUser = 1;
-//  string Remark = 2;
-//  uint64 CreateTime = 3;
-//  UserInfo FriendUser = 4;
-//}
+// message FriendInfo{
+//   UserInfo OwnerUser = 1;
+//   string Remark = 2;
+//   uint64 CreateTime = 3;
+//   UserInfo FriendUser = 4;
+// }
 
 message FriendApplication {
   int64 addTime = 1;
@@ -413,18 +410,16 @@ message FromToUserID {
   string toUserID = 2;
 }
 
-//FromUserID apply to add ToUserID
-message FriendApplicationTips {
-  FromToUserID fromToUserID = 1;
-}
+// FromUserID apply to add ToUserID
+message FriendApplicationTips { FromToUserID fromToUserID = 1; }
 
-//FromUserID accept or reject ToUserID
+// FromUserID accept or reject ToUserID
 message FriendApplicationApprovedTips {
   FromToUserID fromToUserID = 1;
   string handleMsg = 2;
 }
 
-//FromUserID accept or reject ToUserID
+// FromUserID accept or reject ToUserID
 message FriendApplicationRejectedTips {
   FromToUserID fromToUserID = 1;
   string handleMsg = 2;
@@ -434,30 +429,20 @@ message FriendApplicationRejectedTips {
 message FriendAddedTips {
   FriendInfo friend = 1;
   int64 operationTime = 2;
-  PublicUserInfo opUser = 3; //who do this
+  PublicUserInfo opUser = 3; // who do this
 }
 
 // FromUserID  deleted a friend ToUserID
-message FriendDeletedTips {
-  FromToUserID fromToUserID = 1;
-}
+message FriendDeletedTips { FromToUserID fromToUserID = 1; }
 
-message BlackAddedTips {
-  FromToUserID fromToUserID = 1;
-}
+message BlackAddedTips { FromToUserID fromToUserID = 1; }
 
-message BlackDeletedTips {
-  FromToUserID fromToUserID = 1;
-}
+message BlackDeletedTips { FromToUserID fromToUserID = 1; }
 
-message FriendInfoChangedTips {
-  FromToUserID fromToUserID = 1;
-}
+message FriendInfoChangedTips { FromToUserID fromToUserID = 1; }
 
 //////////////////////user/////////////////////
-message UserInfoUpdatedTips {
-  string userID = 1;
-}
+message UserInfoUpdatedTips { string userID = 1; }
 
 //////////////////////conversation/////////////////////
 message ConversationUpdateTips {
@@ -479,7 +464,7 @@ message DeleteMessageTips {
   repeated uint32 seqList = 3;
 }
 
-///cms
+/// cms
 message RequestPagination {
   int32 pageNumber = 1;
   int32 showNumber = 2;

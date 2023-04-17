@@ -1,17 +1,18 @@
 package conversation
 
 import (
-	api "Open_IM/pkg/base_info"
-	"Open_IM/pkg/common/config"
-	"Open_IM/pkg/common/log"
-	"Open_IM/pkg/grpc-etcdv3/getcdv3"
-	pbConversation "Open_IM/pkg/proto/conversation"
-	pbUser "Open_IM/pkg/proto/user"
-	"Open_IM/pkg/utils"
 	"context"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"
+
+	api "github.com/OpenIMSDK/Open-IM-Server/pkg/base_info"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/config"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/common/log"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/grpc-etcdv3/getcdv3"
+	pbConversation "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/conversation"
+	pbUser "github.com/OpenIMSDK/Open-IM-Server/pkg/proto/user"
+	"github.com/OpenIMSDK/Open-IM-Server/pkg/utils"
+	"github.com/gin-gonic/gin"
 )
 
 func SetConversation(c *gin.Context) {
@@ -312,17 +313,17 @@ func SetRecvMsgOpt(c *gin.Context) {
 	c.JSON(http.StatusOK, resp)
 }
 
-//Deprecated
+// Deprecated
 func SetReceiveMessageOpt(c *gin.Context) {
 
 }
 
-//Deprecated
+// Deprecated
 func GetReceiveMessageOpt(c *gin.Context) {
 
 }
 
-//Deprecated
+// Deprecated
 func GetAllConversationMessageOpt(c *gin.Context) {
 
 }
